@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<level type="1">
+  <meta size="1000" score="0" buttonPrice="10"></meta>
+  <obstacles>
+    <obstacle type="1" x="100" y="1000" inflictsDamage="true" healthDamage="10" rotation="0" scale="1" />
+  </obstacles>
+  <bear maxHealth="100" lives="3" startPosition="200" velocity="3" damage="11" criticalDamage="20" defaultAmmo="50" />
+  <monsters />
+  <buttons />
+  <powerups />
+</level>

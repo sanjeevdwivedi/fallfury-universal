@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<level type="0">
+  <meta size="1000" score="0" buttonPrice="10"></meta>
+  <obstacles>
+    <obstacle type="0" x="200" y="1000" inflictsDamage="true" healthDamage="10" rotation="0" scale="1" />
+  </obstacles>
+  <bear maxHealth="100" lives="3" startPosition="200" velocity="3" damage="11" criticalDamage="20" defaultAmmo="50" />
+  <monsters />
+  <buttons />
+  <powerups>
+    <powerup category="1" type="4" x="200" y="1000" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1200" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1300" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1400" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1500" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1600" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1700" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1800" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="4" x="200" y="1900" effect="3" lifespan="3"></powerup>
+  </powerups>
+</level>

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Coding4FunMain.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.h">
+      <Filter>Content</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\AudioEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\AudioManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Characters\Bear.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntityState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Characters\Monster.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Content\ShaderStructures.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DXCore\BasicLoader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DXCore\DDSTextureLoader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DXCore\DirectXBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DXCore\DirectXLinker.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)DXCore\SpriteWorks.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\AmmoItem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\BasicShapes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\Button.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\GameState.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\LevelType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\MonsterType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\Obstacle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\ObstacleType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\Powerup.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\PowerupCategory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\PowerupType.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\SizeEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Entities\TopScore.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\GameCompleteScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\GameOverScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\GamePlayScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\GameScreenBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\GameWinScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\GenericCloudScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)GameScreens\MenuScreen.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\BasicMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\Geometry.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\LevelDataLoader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\LocalDiagnostics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\RWContract.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\SettingsHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\StaticDataHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\Timer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Helpers\TopScoreLoader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ParticleSystem\Particle.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ParticleSystem\ParticleCore.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ParticleSystem\ParticleSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ScreenManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Coding4FunMain.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.cpp">
+      <Filter>Content</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\AudioEngine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\AudioManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Bear.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Livingentity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Monster.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)DXCore\BasicLoader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)DXCore\DDSTextureLoader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)DXCore\DirectXBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)DXCore\SpriteWorks.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Entities\Button.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Entities\Powerup.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Entities\TopScore.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\GameCompleteScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\GameOverScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\GamePlayScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\GameScreenBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\GameWinScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\GenericCloudScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)GameScreens\MenuScreen.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\Geometry.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\LevelDataLoader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\LocalDiagnostics.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\RWContract.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\SettingsHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\StaticDataHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\Timer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Helpers\TopScoreLoader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ParticleSystem\Particle.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ParticleSystem\ParticleCore.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ParticleSystem\ParticleSet.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ScreenManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SamplePixelShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SampleVertexShader.hlsl">
+      <Filter>Content</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\GeometryShader.gs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\GeometryShader.vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\Instancing.vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\PixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\Replication.vs.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{c64b3db3-a978-40e6-a2df-07b1cc4a1361}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>{5e28e5d1-d8e6-47fd-a15b-94f7a24c9a74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{02a7d0c5-439d-4873-b87a-ef161bb2538e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\candyland_theme.wma" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\game_over.wma" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\game_won.wma" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\magic_bean_theme.wma" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\maintheme.wma" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\nightmare_theme.wma" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\badhealth.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\cloud_overlay_a.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\cloud_overlay_b.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\galaxy_overlay_a.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\galaxy_overlay_b.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_blue_a.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_blue_b.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_dark_blue_a.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_dark_blue_b.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_red_a.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_red_b.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\star_overlay_a.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\star_overlay_b.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_body.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_head.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_leftarm.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_rightarm.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_leftarm.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_rightarm.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\full_body.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\winner_down.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\winner_up.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\buttonHud.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\clockHud.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\heartHud.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\pauseButton.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\30x30Tile.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\50x50Tile.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-80.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-100.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-140.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-180.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\310x150Tile.scale-100.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\SplashScreen.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\bronze.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\gold.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\silver.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\circle.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\large_logo.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\microparticle.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\project_logo.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss1.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss2.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss3.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\bubble.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\cape.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\helmet.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\parachute.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\FallFuryLogo.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\leftArrow.png" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\rightArrow.png" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_body_left.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_body_right.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_hurt.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_left.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_right.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_headblink_left.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_headblink_right.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_1.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_2.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_3.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss03_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss03_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_04.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss10_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss10_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_backgroundDream_01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_backgroundDream_02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_obstacle1.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_obstacle2.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle04.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle05.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\cloudBig.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikeplat.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesLarge.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesMedium.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesSmall.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace04.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace05.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace06.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupAxe.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupBoomerang.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupBubble.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupCape.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHammer.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHealth.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHelmet.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupKnife.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupParachute.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupPlasmaBall.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\button.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\lightning.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\monster.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\ninjastar.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\particle.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\sparkle.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\stuffing.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\axe.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\boomerang.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\hammer.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\knife.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\plasma_enemy.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\plasmaball.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock01.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock02.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock03.dds" />
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\double_arrow.png" />
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuexpanded.png" />
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuexpanded_2.png" />
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuitem.png" />
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\single_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\BearCry.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Coin1.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead1.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead2.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead3.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\GenericPowerup.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HardSoft1.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HealthMax.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HelmetPowerup.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh1.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh2.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh3.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\MenuSlide.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\MenuTap.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch1.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch2.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch3.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\ParachutePowerup.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\SharpSoft1.wav" />
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Wind.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Common\FallFuryStyles.xaml" />
+    <Page Include="$(MSBuildThisFileDirectory)Common\StandardStyles.xaml" />
+    <Page Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml" />
+    <Page Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_and_beyond.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_stalking.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\thorn_apart.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\chasing_monsters.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\full_pilot.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\mind.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\the_beginning.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\chasing_monsters.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\full_pilot.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\the_beginning.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lightyears_away.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lost_planet.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\rocket_power.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\stars_and_moons.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\multiple.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\single.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Death\0.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\bronze.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\gold.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\silver.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\0.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\1.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\2.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\3.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\4.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\5.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\6.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\7.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\8.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\9.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\10.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\0.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\1.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\0.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\1.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\0.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\1.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\PowerUps\0.xml" />
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\core.xml" />
+  </ItemGroup>
+</Project>

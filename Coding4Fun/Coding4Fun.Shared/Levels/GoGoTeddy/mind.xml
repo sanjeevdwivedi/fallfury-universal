@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+
+  NIGHTMARE - 0,
+	MAGIC_BEANS - 1,
+	DREAM - 2
+
+-->
+
+<level type="0">
+  <meta score="0" buttonPrice="10"></meta>
+  <bear maxHealth="100" startPosition="300" velocity="9.0" damage="11" criticalDamage="20" defaultAmmo="100" />
+
+  <!--OT_CLOUD = 0,
+  OT_SPIKE_NIGHTMARE_LARGE = 1,
+  OT_SPIKE_NIGHTMARE_MEDIUM = 2,
+  OT_SPIKE_NIGHTMARE_SMALL = 3,
+  OT_BEAN_A = 4,
+  OT_BEAN_B = 5,
+  OT_BEAN_C = 6,
+  OT_BEAN_D = 7,
+  OT_BEAN_E = 8-->
+
+  <!--
+  MAGIC BEAN LEVEL MARGIN
+  Since the beanstalks are made in such a way that those can be only placed on the side of the screen, here are the positioning
+  coordinates for them:
+  
+  OT_BEAN_A: 269.5 (Left) 498.5 (Right, with 3.14 rotation)
+  OT_BEAN_B: 128.5 (left) 638.5 (Right, with 3.14 rotation)
+  OT_BEAN_C: 172 (left) 596 (Right, with 3.14 rotation)
+  OT_BEAN_D: 188.5 (left) 579.5 (Right, with 3.14 rotation)
+  OT_BEAN_E: 206.5 (left) 561.5 (Right, with 3.14 rotation)
+  -->
+
+  <obstacles>
+    <obstacle type="3" x="534.5" y="3300" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="5800" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+    <obstacle type="3" x="534.5" y="6800" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="7800" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="8800" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="9800" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="10800" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="12100" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="12700" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="13700" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="14400" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="17000" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="17800" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="18500" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+    <obstacle type="2" x="546" y="19100" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="19900" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="20400" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="23600" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="24100" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="24600" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="25100" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />  
+    <obstacle type="3" x="534.5" y="28400" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="3" x="534.5" y="29000" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="29500" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="30100" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+    <obstacle type="2" x="546" y="30700" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="31400" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+    <obstacle type="3" x="534.5" y="37700" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="2" x="546" y="38400" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="39000" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+    <obstacle type="2" x="546" y="39700" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="40300" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+    <obstacle type="2" x="546" y="44200" inflictsDamage="true" healthDamage="7" rotation="0" scale="1" />
+    <obstacle type="1" x="119" y="44600" inflictsDamage="true" healthDamage="7" rotation="3.14" scale="1" />
+  </obstacles>
+
+  <!--
+  
+  MT_NIGHTMARE_A = 0,
+	MT_NIGHTMARE_B = 1,
+	MT_NIGHTMARE_C = 2,
+	MT_MAGICBEAN_A = 3,
+	MT_MAGICBEAN_B = 4,
+	MT_MAGICBEAN_C = 5,
+	MT_CANDYLAND_A = 6,
+	MT_CANDYLAND_B = 7,
+	MT_CANDYLAND_C = 8,
+	MT_CANDYLAND_D = 9,
+	MT_CANDYLAND_E = 10
+  
+  -->
+
+  <monsters>
+    <monster lifetime="3000" scale=".2" velocityX="2" velocityY="2" type="0" x="460" y="11500" maxHealth="60" bonus="100" lives="0" damage="7" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="3000" scale=".2" velocityX="2" velocityY="2" type="1" x="460" y="18800" maxHealth="60" bonus="100" lives="0" damage="7" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="3000" scale=".2" velocityX="2" velocityY="2" type="2" x="460" y="24700" maxHealth="80" bonus="100" lives="0" damage="10" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="3000" scale=".2" velocityX="2" velocityY="2" type="3" x="460" y="30500" maxHealth="80" bonus="100" lives="0" damage="10" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="3000" scale=".2" velocityX="2" velocityY="2" type="4" x="460" y="37000" maxHealth="80" bonus="100" lives="0" damage="10" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="5000" scale=".3" velocityX="2" velocityY="2" type="5" x="460" y="44800" maxHealth="200" bonus="100" lives="0" damage="13" criticalDamage="8" defaultAmmo="50" />
+  </monsters>
+
+
+  <buttons>
+    <button x="300" y="1200" />
+    <button x="360" y="1260" />
+    <button x="420" y="1320" />
+    <button x="480" y="1380" />
+    <button x="540" y="1440" />
+
+    <button x="540" y="2000" />
+    <button x="480" y="2060" />
+    <button x="420" y="2120" />
+    <button x="360" y="2180" />
+    <button x="300" y="2240" />
+
+    <button x="300" y="2600" />
+    <button x="360" y="2660" />
+    <button x="420" y="2720" />
+    <button x="480" y="2780" />
+    <button x="540" y="2840" />
+    <button x="480" y="2900" />
+    <button x="420" y="2960" />
+    <button x="360" y="3020" />
+    <button x="300" y="3080" />
+
+    <button x="300" y="3600" />
+    <button x="360" y="3660" />
+    <button x="420" y="3720" />
+    <button x="480" y="3780" />
+    <button x="540" y="3840" />
+    
+    <button x="540" y="3900" />
+    <button x="540" y="3960" />
+    <button x="540" y="4020" />
+    <button x="540" y="4080" />
+    <button x="540" y="4140" />
+
+    <button x="540" y="4200" />
+    <button x="480" y="4260" />
+    <button x="420" y="4320" />
+    <button x="360" y="4380" />
+    <button x="300" y="4440" />
+
+    <button x="300" y="4800" />
+    <button x="360" y="4860" />
+    <button x="420" y="4920" />
+    <button x="480" y="4980" />
+    <button x="540" y="5040" />
+
+    <button x="540" y="5300" />
+    <button x="540" y="5360" />
+    <button x="540" y="5420" />
+    <button x="540" y="5480" />
+    <button x="540" y="5540" />
+
+    <button x="540" y="5800" />
+    <button x="540" y="5860" />
+    <button x="540" y="5920" />
+    <button x="540" y="5980" />
+    <button x="540" y="6040" />
+
+    <button x="240" y="7800" />
+    <button x="240" y="7860" />
+    <button x="240" y="7920" />
+    <button x="240" y="7980" />
+    <button x="240" y="8040" />
+    <button x="240" y="8100" />
+    <button x="240" y="8160" />
+    <button x="240" y="8220" />
+    <button x="240" y="8280" />
+    <button x="240" y="8340" />
+    <button x="240" y="8400" />
+    <button x="240" y="8460" />
+    <button x="240" y="8520" />
+    <button x="240" y="8580" />
+    <button x="240" y="8640" />
+    <button x="240" y="8700" />
+    <button x="240" y="8760" />
+    <button x="240" y="8820" />
+    <button x="240" y="8880" />
+    <button x="240" y="8940" />
+    <button x="240" y="9000" />
+    <button x="240" y="9060" />
+    <button x="240" y="9120" />
+    <button x="240" y="9180" />
+    <button x="240" y="9240" />
+    <button x="240" y="9300" />
+    <button x="240" y="9360" />
+    <button x="240" y="9420" />
+    <button x="240" y="9480" />
+    <button x="240" y="9540" />
+
+    <button x="300" y="11000" />
+    <button x="360" y="11060" />
+    <button x="420" y="11120" />
+    <button x="480" y="11180" />
+    <button x="540" y="11240" />
+
+    <button x="140" y="13000" />
+    <button x="140" y="13060" />
+    <button x="140" y="13120" />
+    <button x="140" y="13180" />
+    <button x="140" y="13240" />
+    <button x="140" y="13300" />
+    <button x="140" y="13360" />
+    <button x="140" y="13420" />
+    <button x="140" y="13480" />
+    <button x="140" y="13540" />
+    <button x="140" y="13600" />
+    <button x="140" y="13660" />
+    <button x="140" y="13720" />
+
+    <button x="300" y="14900" />
+    <button x="360" y="14960" />
+    <button x="420" y="15020" />
+    <button x="480" y="15080" />
+    <button x="540" y="15140" />
+
+    <button x="300" y="14960" />
+    <button x="360" y="15020" />
+    <button x="420" y="15080" />
+    <button x="480" y="15140" />
+    <button x="540" y="15200" />
+
+    <button x="300" y="16000" />
+    <button x="360" y="16060" />
+    <button x="420" y="16120" />
+    <button x="480" y="16180" />
+    <button x="540" y="16240" />
+
+    <button x="300" y="16060" />
+    <button x="360" y="16120" />
+    <button x="420" y="16180" />
+    <button x="480" y="16240" />
+    <button x="540" y="16300" />
+
+    <button x="140" y="17000" />
+    <button x="140" y="17060" />
+    <button x="140" y="17120" />
+    <button x="140" y="17180" />
+    <button x="140" y="17240" />
+    <button x="140" y="17300" />
+    <button x="140" y="17360" />
+    <button x="140" y="17420" />
+    <button x="140" y="17480" />
+    <button x="140" y="17540" />
+    <button x="140" y="17600" />
+    <button x="140" y="17660" />
+    <button x="140" y="17720" />
+    <button x="140" y="17780" />
+    <button x="140" y="17840" />
+    <button x="140" y="17900" />
+    <button x="140" y="17960" />
+    <button x="140" y="18020" />
+
+    <button x="140" y="19000" />
+    <button x="140" y="19060" />
+    <button x="140" y="19120" />
+    <button x="140" y="19180" />
+    <button x="140" y="19240" />
+    <button x="140" y="19300" />
+    <button x="140" y="19360" />
+    <button x="140" y="19420" />
+    <button x="140" y="19480" />
+    <button x="140" y="19540" />
+    <button x="140" y="19600" />
+    <button x="140" y="19660" />
+    <button x="140" y="19720" />
+    <button x="140" y="19780" />
+    <button x="140" y="19840" />
+    <button x="140" y="19900" />
+    <button x="140" y="19960" />
+    <button x="140" y="20020" />
+
+    <button x="140" y="20600" />
+    <button x="200" y="20660" />
+    <button x="260" y="20720" />
+    <button x="320" y="20780" />
+    <button x="380" y="20840" />
+    <button x="440" y="20900" />
+    <button x="500" y="20960" />
+    <button x="560" y="21020" />
+    <button x="620" y="21080" />
+    <button x="560" y="21140" />
+    <button x="500" y="21200" />
+    <button x="440" y="21260" />
+    <button x="380" y="21320" />
+    <button x="320" y="21380" />
+    <button x="260" y="21440" />
+    <button x="200" y="21500" />
+    <button x="140" y="21560" />
+    <button x="200" y="21620" />
+    <button x="260" y="21680" />
+    <button x="320" y="21740" />
+    <button x="380" y="21800" />
+    <button x="440" y="21860" />
+    <button x="500" y="21920" />
+    <button x="560" y="21980" />
+    <button x="620" y="22040" />
+    <button x="560" y="22100" />
+    <button x="500" y="22160" />
+    <button x="440" y="22220" />
+    <button x="380" y="22280" />
+    <button x="320" y="22340" />
+    <button x="260" y="22400" />
+    <button x="200" y="22460" />
+    <button x="140" y="22520" />
+    <button x="200" y="22580" />
+    <button x="260" y="22640" />
+    <button x="320" y="22700" />
+    <button x="380" y="22760" />
+    <button x="440" y="22820" />
+    <button x="500" y="22880" />
+    <button x="560" y="22940" />
+    <button x="620" y="23000" />
+
+    <button x="140" y="23500" />
+    <button x="140" y="23560" />
+    <button x="140" y="23620" />
+    <button x="140" y="23680" />
+    <button x="140" y="23740" />
+    <button x="140" y="23800" />
+    <button x="140" y="23860" />
+    <button x="140" y="23920" />
+    <button x="140" y="23980" />
+    <button x="140" y="24040" />
+    <button x="140" y="24100" />
+    <button x="140" y="24160" />
+    <button x="140" y="24220" />
+    <button x="140" y="24280" />
+    <button x="140" y="24340" />
+    <button x="140" y="24400" />
+    <button x="140" y="24460" />
+    <button x="140" y="24520" />
+
+    <button x="140" y="25600" />
+    <button x="200" y="25660" />
+    <button x="260" y="25720" />
+    <button x="320" y="25780" />
+    <button x="380" y="25840" />
+    <button x="440" y="25900" />
+    <button x="500" y="25960" />
+    <button x="560" y="26020" />
+    <button x="620" y="26080" />
+    <button x="560" y="26140" />
+    <button x="500" y="26200" />
+    <button x="440" y="26260" />
+    <button x="380" y="26320" />
+    <button x="320" y="26380" />
+    <button x="260" y="26440" />
+    <button x="200" y="26500" />
+    <button x="140" y="26560" />
+    <button x="200" y="26620" />
+    <button x="260" y="26680" />
+    <button x="320" y="26740" />
+    <button x="380" y="26800" />
+    <button x="440" y="26860" />
+    <button x="500" y="26920" />
+    <button x="560" y="26980" />
+    <button x="620" y="27040" />
+    <button x="560" y="27100" />
+    <button x="500" y="27160" />
+    <button x="440" y="27220" />
+    <button x="380" y="27280" />
+    <button x="320" y="27340" />
+    <button x="260" y="27400" />
+    <button x="200" y="27460" />
+    <button x="140" y="27520" />
+    <button x="200" y="27580" />
+    <button x="260" y="27640" />
+    <button x="320" y="27700" />
+    <button x="380" y="27760" />
+    <button x="440" y="27820" />
+    <button x="500" y="27880" />
+    <button x="560" y="27940" />
+    <button x="620" y="28000" />
+
+    <button x="140" y="28500" />
+    <button x="140" y="28560" />
+    <button x="140" y="28620" />
+    <button x="140" y="28680" />
+    <button x="140" y="28740" />
+    <button x="140" y="28800" />
+    <button x="140" y="28860" />
+    <button x="140" y="28920" />
+    <button x="140" y="28980" />
+    <button x="140" y="29040" />
+    <button x="140" y="29100" />
+    <button x="140" y="29160" />
+    <button x="140" y="29220" />
+    <button x="140" y="29280" />
+    <button x="140" y="29340" />
+    <button x="140" y="29400" />
+    <button x="140" y="29460" />
+    <button x="140" y="29520" />
+
+    <button x="540" y="30000" />
+    <button x="540" y="30060" />
+    <button x="540" y="30120" />
+    <button x="540" y="30180" />
+    <button x="540" y="30240" />
+
+    <button x="300" y="31700" />
+    <button x="300" y="31760" />
+    <button x="300" y="31820" />
+    <button x="300" y="31880" />
+    <button x="300" y="31940" />
+    <button x="300" y="32000" />
+    <button x="300" y="32060" />
+    <button x="300" y="32120" />
+    <button x="300" y="32180" />
+    <button x="300" y="32240" />
+    <button x="300" y="32300" />
+    <button x="300" y="32360" />
+    <button x="300" y="32420" />
+    <button x="300" y="32480" />
+    <button x="300" y="32540" />
+    <button x="300" y="32600" />
+    <button x="300" y="32660" />
+    <button x="300" y="32720" />
+
+    <button x="280" y="32780" />
+    <button x="260" y="32840" />
+    <button x="240" y="32900" />
+    <button x="220" y="32960" />
+    <button x="200" y="33020" />
+    <button x="180" y="33080" />
+    <button x="160" y="33140" />
+    <button x="140" y="33200" />
+    <button x="120" y="33260" />
+    <button x="100" y="33320" />
+    <button x="120" y="33380" />
+    <button x="140" y="33440" />
+    <button x="160" y="33500" />
+    <button x="180" y="33560" />
+    <button x="200" y="33620" />
+    <button x="220" y="33680" />
+    <button x="240" y="33740" />
+    <button x="260" y="33800" />
+    <button x="280" y="33860" />
+    <button x="300" y="33920" />
+    <button x="320" y="33980" />
+    <button x="340" y="34040" />
+    <button x="360" y="34100" />
+    <button x="380" y="34160" />
+    <button x="400" y="34220" />
+    <button x="420" y="34280" />
+    <button x="440" y="34340" />
+    <button x="460" y="34400" />
+    <button x="480" y="34460" />
+    <button x="500" y="34520" />
+    <button x="520" y="34580" />
+    <button x="540" y="34640" />
+    <button x="560" y="34700" />
+    <button x="580" y="34760" />
+    <button x="600" y="34820" />
+    <button x="620" y="34880" />
+    <button x="600" y="34940" />
+    <button x="580" y="35000" />
+    <button x="560" y="35060" />
+    <button x="540" y="35120" />
+    <button x="520" y="35180" />
+    <button x="500" y="35240" />
+    <button x="480" y="35300" />
+    <button x="460" y="35360" />
+    <button x="440" y="35420" />
+    <button x="420" y="35480" />
+    <button x="400" y="35540" />
+    <button x="380" y="35600" />
+    <button x="360" y="35660" />
+    <button x="340" y="35720" />
+    <button x="320" y="35780" />
+    <button x="300" y="35840" />
+    <button x="300" y="35900" />
+    <button x="300" y="35960" />
+    <button x="300" y="36020" />
+    <button x="300" y="36080" />
+    <button x="300" y="36140" />
+    <button x="300" y="36200" />
+    <button x="300" y="36260" />
+    <button x="300" y="36320" />
+    <button x="300" y="36380" />
+    <button x="300" y="36440" />
+    <button x="300" y="36500" />
+    <button x="300" y="36560" />
+    <button x="300" y="36620" />
+    <button x="300" y="36680" />
+    <button x="300" y="36740" />
+    <button x="300" y="36800" />
+    <button x="300" y="36860" />
+
+    <button x="140" y="41000" />
+    <button x="140" y="41060" />
+    <button x="140" y="41120" />
+    <button x="140" y="41180" />
+    <button x="140" y="41240" />
+    <button x="140" y="41300" />
+    <button x="140" y="41360" />
+    <button x="140" y="41420" />
+    <button x="140" y="41480" />
+    <button x="140" y="41540" />
+    <button x="140" y="41600" />
+    <button x="140" y="41660" />
+    <button x="140" y="41720" />
+
+    <button x="300" y="42000" />
+    <button x="300" y="42060" />
+    <button x="300" y="42120" />
+    <button x="300" y="42180" />
+    <button x="300" y="42240" />
+    <button x="300" y="42300" />
+    <button x="300" y="42360" />
+    <button x="300" y="42420" />
+    <button x="300" y="42480" />
+    <button x="300" y="42540" />
+    <button x="300" y="42600" />
+    <button x="300" y="42660" />
+    <button x="300" y="42720" />
+
+    <button x="560" y="43000" />
+    <button x="560" y="43060" />
+    <button x="560" y="43120" />
+    <button x="560" y="43180" />
+    <button x="560" y="43240" />
+    <button x="560" y="43300" />
+    <button x="560" y="43360" />
+    <button x="560" y="43420" />
+    <button x="560" y="43480" />
+    <button x="560" y="43540" />
+    <button x="560" y="43600" />
+    <button x="560" y="43660" />
+    <button x="560" y="43720" />
+  </buttons>
+  <!--
+  
+  Powerup Categories:
+  1 - Good
+  0 - Bad
+  
+  Powerup Types:
+  HEALTH = 0,
+  HELMET = 1,
+  PARACHUTE = 2,
+  BUBBLE = 3,
+  CAPE = 4,
+  AXE = 5,
+  BOOMERANG = 6,
+  HAMMER = 7,
+  KNIFE = 8,
+  PLASMA_BALL = 9
+  
+  -->
+  <powerups>
+    <powerup category="1" type="4" x="200" y="6500" effect="3" lifespan="3"></powerup>
+    <powerup category="1" type="1" x="540" y="18400" effect="999" lifespan="6"></powerup>
+    <powerup category="1" type="0" x="540" y="31500" effect="999" lifespan="6"></powerup>
+  </powerups>
+</level>

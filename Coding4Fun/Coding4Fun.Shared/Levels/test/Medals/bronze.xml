@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<level type="1">
+  <meta score="0" buttonPrice="10"></meta>
+  <bear maxHealth="100" lives="3" startPosition="300" velocity="3.0" damage="11" criticalDamage="20" defaultAmmo="50" />
+
+  <obstacles>
+    <!--MAGIC BEAN OBSTACLE SAMPLE-->
+    <obstacle type="4" x="498.5" y="1000" inflictsDamage="false" healthDamage="1" rotation="3.14" scale="1" />
+    <obstacle type="5" x="128.5" y="2000" inflictsDamage="false" healthDamage="1" rotation="0" scale="1" />
+    <obstacle type="6" x="596" y="3000" inflictsDamage="false" healthDamage="10" rotation="3.14" scale="1" />
+    <obstacle type="7" x="188.5" y="4000" inflictsDamage="false" healthDamage="10" rotation="0" scale="1" />
+    <obstacle type="8" x="561.5" y="5000" inflictsDamage="false" healthDamage="10" rotation="3.14" scale="1" />
+  </obstacles>
+
+  <monsters>
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="4000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="5000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="6000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="7000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="8000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="9000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+    <monster lifetime="1000" scale=".2" velocityX="1" type="0" x="220" y="10000" maxHealth="70" bonus="100" damage="1" criticalDamage="8" defaultAmmo="50" />
+  </monsters>
+
+  <buttons>
+    <button x="100" y="1200" />
+  </buttons>
+
+  <powerups></powerups>
+</level>

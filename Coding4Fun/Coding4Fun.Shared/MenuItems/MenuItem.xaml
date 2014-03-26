@@ -1,0 +1,72 @@
+﻿<UserControl
+    x:Class="Coding4Fun.FallFury.MenuItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Coding4Fun.FallFury"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="menuItem"
+    Margin="10, 0, 0, 10">
+
+	<Grid 
+		Height="65" 
+		ManipulationMode="TranslateX"
+		ManipulationCompleted="Grid_ManipulationCompleted"
+		ManipulationDelta="Grid_ManipulationDelta" 
+		x:Name="ControlContainer"
+		PointerPressed="Grid_PointerPressed" 
+		PointerReleased="Grid_PointerReleased">
+        
+        <Grid.Resources>
+            <Storyboard x:Name="ArrowAnimator">
+                <DoubleAnimation Storyboard.TargetName="ImageTranslateTransform"
+                                 Storyboard.TargetProperty="X"
+                                 From="0"
+                                 To="20"
+                                 Duration="0:0:0.4"
+                                 RepeatBehavior="Forever"
+                                 AutoReverse="True">
+                </DoubleAnimation>
+            </Storyboard>
+
+        </Grid.Resources>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition />
+			<RowDefinition />
+			<RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="10" />
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<StackPanel Orientation="Horizontal" Grid.RowSpan="4" Grid.ColumnSpan="4">
+			<!-- width is sent in code behind, have to get this dynamic ...  -->
+			<Grid Width="350" x:Name="coverRectangle">
+				<Rectangle Fill="#303030" />
+				<Rectangle 
+					Fill="Red" 
+					x:Name="coverActiveRectangle" />
+			</Grid>
+            <Image x:Name="MenuImage" Source="ms-appx:///MenuItems/single_arrow.png" Margin="10,0,0,0" Stretch="Uniform">
+                <Image.RenderTransform>
+                    <TranslateTransform x:Name="ImageTranslateTransform"></TranslateTransform>
+                </Image.RenderTransform>
+            </Image>
+        </StackPanel>
+		<!---->
+
+		<TextBlock 
+            Text="{Binding ElementName=menuItem, RelativeSource={RelativeSource Self}, Path=Label}"
+			Grid.RowSpan="4"
+			Grid.ColumnSpan="4"
+			Style="{StaticResource MenuItemText}">
+
+        </TextBlock>
+        
+        <MediaElement x:Name="coreMenuMedia" Source="ms-appx:///Assets/Sounds/MenuTap.wav" AutoPlay="False"></MediaElement>
+        <MediaElement x:Name="slideMenuMedia" Source="ms-appx:///Assets/Sounds/MenuSlide.wav" AutoPlay="False"></MediaElement>
+    </Grid>
+</UserControl>

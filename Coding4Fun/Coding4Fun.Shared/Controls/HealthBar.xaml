@@ -1,0 +1,21 @@
+﻿<UserControl
+    x:Class="Coding4Fun.FallFury.Controls.HealthBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FallFury"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="410"
+    d:DesignWidth="20" Height="410" Width="20">
+    
+    <Grid>
+        <StackPanel VerticalAlignment="Top" Margin="0, 5, 0,20">
+            <Rectangle Height="400" Style="{StaticResource HealthRectangle}" />
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Margin="0, 5, 0, 10">
+            <Rectangle x:Name="OverlayStacker" Height="0" Style="{StaticResource HealthOverlayRectangle}" />
+        </StackPanel>
+    </Grid>
+</UserControl>

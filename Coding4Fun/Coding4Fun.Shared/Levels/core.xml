@@ -1,0 +1,18 @@
+<tiers>
+  <tier name="STARRY EYED">
+    <level name="stars, stars..." file="Space\stars_and_moons.xml"/>
+    <level name="suns away" file="Space\lightyears_away.xml"/>
+    <level name="lost planet" file="Space\lost_planet.xml"/>
+  </tier>
+  <tier name="DOWN, DOWN AND AWAY">
+    <level name="mind travels" file="GoGoTeddy\mind.xml"></level>
+    <level name="falling in" file="GoGoTeddy\full_pilot.xml"></level>
+    <level name="frontlines" file="GoGoTeddy\the_beginning.xml"></level>
+    <level name="the chase" file="GoGoTeddy\chasing_monsters.xml"></level>
+  </tier>
+  <tier name="SECRET GARDEN">
+    <level name="bean stalking" file="Garden\bean_stalking.xml"/>
+    <level name="thorn apart" file="Garden\thorn_apart.xml"/>
+    <level name="bean &amp; button" file="Garden\bean_and_beyond.xml"/>
+  </tier>
+</tiers>
