@@ -59,8 +59,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntityState.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\Monster.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Coding4FunMain.h" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Coding4FunMain.cpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Content\ShaderStructures.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml.h">
       <DependentUpon>$(MSBuildThisFileDirectory)Controls\HealthBar.xaml</DependentUpon>
@@ -113,19 +111,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Common\DeviceResources.cpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Common\DirectXHelper.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Common\StepTimer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.h" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.cpp" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ScreenManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SamplePixelShader.hlsl">
-      <ShaderType>Pixel</ShaderType>
-    </FxCompile>
-    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SampleVertexShader.hlsl">
-      <ShaderType>Vertex</ShaderType>
-    </FxCompile>
     <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\GeometryShader.gs.hlsl">
       <DisableOptimizations>true</DisableOptimizations>
       <ShaderType>Geometry</ShaderType>

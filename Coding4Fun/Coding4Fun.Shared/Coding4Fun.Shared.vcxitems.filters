@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Coding4FunMain.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Common\DirectXHelper.h">
       <Filter>Common</Filter>
@@ -11,12 +10,6 @@
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Common\DeviceResources.h">
       <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.h">
-      <Filter>Content</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.h">
-      <Filter>Content</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\Bear.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntity.h" />
@@ -74,16 +67,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Coding4FunMain.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Common\DeviceResources.cpp">
       <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Content\Sample3DSceneRenderer.cpp">
-      <Filter>Content</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.cpp">
-      <Filter>Content</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Bear.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Livingentity.cpp" />
@@ -127,12 +113,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SamplePixelShader.hlsl">
-      <Filter>Content</Filter>
-    </FxCompile>
-    <FxCompile Include="$(MSBuildThisFileDirectory)Content\SampleVertexShader.hlsl">
-      <Filter>Content</Filter>
-    </FxCompile>
     <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\GeometryShader.gs.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
@@ -152,9 +132,6 @@
   <ItemGroup>
     <Filter Include="Common">
       <UniqueIdentifier>{c64b3db3-a978-40e6-a2df-07b1cc4a1361}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Content">
-      <UniqueIdentifier>{5e28e5d1-d8e6-47fd-a15b-94f7a24c9a74}</UniqueIdentifier>
     </Filter>
     <Filter Include="Shaders">
       <UniqueIdentifier>{02a7d0c5-439d-4873-b87a-ef161bb2538e}</UniqueIdentifier>

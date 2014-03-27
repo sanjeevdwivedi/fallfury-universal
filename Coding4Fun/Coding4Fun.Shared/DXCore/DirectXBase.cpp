@@ -397,5 +397,6 @@ void DirectXBase::Present()
 float DirectXBase::ConvertDipsToPixels(float dips)
 {
 	static const float dipsPerInch = 96.0f;
+
 	return floor(dips * m_dpi / dipsPerInch + 0.5f); // Round to nearest integer.
 }

@@ -1082,6 +1082,14 @@ namespace Coding4Fun
 					hr = CreateD3DResources(d3dDevice, resDim, twidth, theight, tdepth, mipCount - skipMip, arraySize, format, isCubeMap, initData.get(), texture, textureView);
 				}
 
+				// TODO: (sanjeevd) On 520, this function fails and GetDeviceRemovedReason returns DXGI_ERROR_DRIVER_INTERNAL_ERROR
+				// http://msdn.microsoft.com/en-us/library/windows/desktop/bb509553(v=vs.85).aspx
+				if (FAILED(hr))
+				{
+					HRESULT hrDeviceRemoved = d3dDevice->GetDeviceRemovedReason();
+					int x = 1;
+				}
+
 				ThrowIfFailed(hr);
 			}
 

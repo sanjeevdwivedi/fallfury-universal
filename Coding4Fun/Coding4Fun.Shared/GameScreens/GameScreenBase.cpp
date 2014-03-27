@@ -44,6 +44,7 @@ void GameScreenBase::Update(float timeTotal, float timeDelta)
 
 }
 
+
 void GameScreenBase::UpdateWindowSize()
 {
 	auto rWidth = Manager->m_renderTargetSize.Width;
@@ -61,9 +62,11 @@ void GameScreenBase::UpdateWindowSize()
 	HiBoundY = LoBoundY + rHeight;
 
 	//m_screenSize = float2(768.0f, rHeight);	
+
 	m_screenSize = float2(768.0f, 1366.0f);
 }
 
+// TODO: (sanjeevd) This is where the background movement actually happens
 void GameScreenBase::MoveBackground(float velocity)
 {
 	if (m_backgroundPositionA <= -BACKGROUND_MIDPOINT)
