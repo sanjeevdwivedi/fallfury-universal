@@ -44,21 +44,4 @@
   <ItemGroup>
     <Page Include="DirectXPage.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Coding4Fun.Shared\MenuItems\double_arrow.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="..\Coding4Fun.Shared\MenuItems\menuexpanded.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="..\Coding4Fun.Shared\MenuItems\menuexpanded_2.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="..\Coding4Fun.Shared\MenuItems\menuitem.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="..\Coding4Fun.Shared\MenuItems\single_arrow.png">
-      <Filter>Assets</Filter>
-    </Image>
-  </ItemGroup>
 </Project>

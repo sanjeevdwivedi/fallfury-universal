@@ -190,11 +190,6 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Image Include="..\Coding4Fun.Shared\MenuItems\double_arrow.png" />
-    <Image Include="..\Coding4Fun.Shared\MenuItems\menuexpanded.png" />
-    <Image Include="..\Coding4Fun.Shared\MenuItems\menuexpanded_2.png" />
-    <Image Include="..\Coding4Fun.Shared\MenuItems\menuitem.png" />
-    <Image Include="..\Coding4Fun.Shared\MenuItems\single_arrow.png" />
     <Image Include="Assets\Logo.png" />
     <Image Include="Assets\SmallLogo.png" />
     <Image Include="Assets\StoreLogo.png" />

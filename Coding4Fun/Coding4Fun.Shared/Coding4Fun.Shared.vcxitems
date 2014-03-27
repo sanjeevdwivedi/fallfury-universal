@@ -161,226 +161,525 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Assets\Music\candyland_theme.wma" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\Music\game_over.wma" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\Music\game_won.wma" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\Music\magic_bean_theme.wma" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\Music\maintheme.wma" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\Music\nightmare_theme.wma" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\badhealth.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\cloud_overlay_a.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\cloud_overlay_b.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\galaxy_overlay_a.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\galaxy_overlay_b.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_blue_a.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_blue_b.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_dark_blue_a.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_dark_blue_b.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_red_a.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_red_b.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\star_overlay_a.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\star_overlay_b.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_body.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_head.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_leftarm.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_rightarm.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_leftarm.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_rightarm.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\full_body.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\winner_down.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\winner_up.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\FallFuryLogo.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\buttonHud.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\clockHud.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\heartHud.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\pauseButton.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-100.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-140.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-180.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-80.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\30x30Tile.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\310x150Tile.scale-100.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\50x50Tile.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\SplashScreen.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\leftArrow.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\bronze.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\gold.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\silver.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\circle.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\large_logo.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\microparticle.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\project_logo.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss1.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss2.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss3.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\bubble.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\cape.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\helmet.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\parachute.png" />
-    <Image Include="$(MSBuildThisFileDirectory)Assets\rightArrow.png" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_body_left.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_body_right.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_headblink_left.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_headblink_right.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_hurt.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_left.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_right.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_1.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_2.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_3.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss03_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss03_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_04.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss10_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss10_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\button.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_backgroundDream_01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_backgroundDream_02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_obstacle1.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_obstacle2.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle04.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle05.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\cloudBig.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikeplat.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesLarge.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesMedium.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesSmall.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace04.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace05.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace06.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\lightning.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\monster.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\ninjastar.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\particle.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupAxe.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupBoomerang.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupBubble.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupCape.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHammer.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHealth.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHelmet.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupKnife.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupParachute.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupPlasmaBall.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\sparkle.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\stuffing.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\axe.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\boomerang.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\hammer.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\knife.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\plasmaball.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\plasma_enemy.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock01.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock02.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock03.dds" />
-    <Image Include="$(MSBuildThisFileDirectory)MenuItems\double_arrow.png" />
-    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuexpanded.png" />
-    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuexpanded_2.png" />
-    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuitem.png" />
-    <Image Include="$(MSBuildThisFileDirectory)MenuItems\single_arrow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\BearCry.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Coin1.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead1.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead2.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead3.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\GenericPowerup.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HardSoft1.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HealthMax.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HelmetPowerup.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh1.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh2.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh3.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\MenuSlide.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\MenuTap.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch1.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch2.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch3.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\ParachutePowerup.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\SharpSoft1.wav" />
-    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Wind.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)Common\FallFuryStyles.xaml" />
     <Page Include="$(MSBuildThisFileDirectory)Common\StandardStyles.xaml" />
     <Page Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml" />
     <Page Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\core.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_and_beyond.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_stalking.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\thorn_apart.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\chasing_monsters.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\full_pilot.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\mind.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\the_beginning.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\chasing_monsters.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\full_pilot.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\the_beginning.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lightyears_away.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lost_planet.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\rocket_power.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\stars_and_moons.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\multiple.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\single.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Death\0.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\bronze.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\gold.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\silver.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\0.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\1.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\10.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\2.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\3.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\4.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\5.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\6.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\7.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\8.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\9.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\0.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\1.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\0.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\1.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\0.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\1.xml" />
-    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\PowerUps\0.xml" />
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\badhealth.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\cloud_overlay_a.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\cloud_overlay_b.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\galaxy_overlay_a.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\galaxy_overlay_b.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_blue_a.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_blue_b.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_dark_blue_a.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_dark_blue_b.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_red_a.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\generic_red_b.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\star_overlay_a.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Backgrounds\star_overlay_b.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_body.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_head.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_leftarm.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_dead_rightarm.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_leftarm.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\bear_rightarm.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\full_body.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\winner_down.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Bear\winner_up.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\FallFuryLogo.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\buttonHud.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\clockHud.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\heartHud.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\HUD\pauseButton.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-140.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-180.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\150x150Tile.scale-80.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\30x30Tile.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\310x150Tile.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\50x50Tile.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Icons\SplashScreen.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\leftArrow.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\bronze.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\gold.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Medals\silver.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\circle.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\large_logo.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\microparticle.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Misc\project_logo.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss1.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss2.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Monsters\demoboss3.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\bubble.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\cape.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\helmet.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\Powerups\parachute.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\rightArrow.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_body_left.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_body_right.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_headblink_left.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_headblink_right.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_hurt.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_left.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\bear_head_right.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\Customized\bear_cape.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\Customized\bear_helmet.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\Customized\bear_parachute_left.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\Customized\bear_parachute_right.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bear\Customized\bubble.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_1.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_2.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss01_3.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss02_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss03_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss03_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss04_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss05_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss06_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss07_04.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss08_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss09_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss10_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss10_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Bosses\boss11_03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\button.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_backgroundDream_01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_backgroundDream_02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_obstacle1.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Dream\TEST_obstacle2.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle04.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\MagicBean\obstacle05.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\cloudBig.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikeplat.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesLarge.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesMedium.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Nightmare\spikesSmall.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace04.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace05.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Levels\Space\obstacleSpace06.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\lightning.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\monster.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\ninjastar.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\particle.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupAxe.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupBoomerang.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupBubble.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupCape.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHammer.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHealth.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupHelmet.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupKnife.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupParachute.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Powerups\powerupPlasmaBall.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\sparkle.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\stuffing.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\axe.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\boomerang.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\fire03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\hammer.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\knife.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\plasmaball.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\plasma_enemy.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock01.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock02.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)DDS\Weapons\shock03.dds">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\candyland_theme.wma">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\game_over.wma">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\game_won.wma">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\magic_bean_theme.wma">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\maintheme.wma">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Assets\Music\nightmare_theme.wma">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\BearCry.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Coin1.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead1.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead2.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\EnemyDead3.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\GenericPowerup.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HardSoft1.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HealthMax.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\HelmetPowerup.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh1.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh2.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Laugh3.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\MenuSlide.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\MenuTap.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch1.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch2.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Ouch3.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\ParachutePowerup.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\SharpSoft1.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Wind.wav">
+      <DeploymentContent>true</DeploymentContent>
+    </Media>
   </ItemGroup>
 </Project>
