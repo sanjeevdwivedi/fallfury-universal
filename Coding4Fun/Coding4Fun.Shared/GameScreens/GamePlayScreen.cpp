@@ -12,8 +12,13 @@ using namespace Coding4Fun::FallFury::Screens;
 using namespace Coding4Fun::FallFury::Audio;
 using namespace Coding4Fun::FallFury::Helpers;
 
-//namespace Coding4Fun {
-//	namespace FallFury {
+
+namespace Coding4Fun {
+	namespace FallFury {
+		extern float ScreenWidth;
+		extern float ScreenHeight;
+	}
+}
 //		namespace Screens
 //{
 GamePlayScreen::GamePlayScreen(ScreenManager^ parent)
@@ -496,14 +501,14 @@ void GamePlayScreen::RenderScreen()
 			m_overlayA.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_overlayPositionA),
 			PositionUnits::DIPs,
-			float2(768.0f, 1366.0f),
+			float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 			SizeUnits::Pixels);
 
 		CurrentSpriteBatch->Draw(
 			m_overlayB.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_overlayPositionB),
 			PositionUnits::DIPs,
-			float2(768.0f, 1366.0f),
+			float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 			SizeUnits::Pixels);
 
 		if (m_currentLevelType == LevelType::SPACE)
@@ -512,14 +517,14 @@ void GamePlayScreen::RenderScreen()
 				m_overlayGalaxyA.Get(),
 				float2(Manager->m_windowBounds.Width / 2, m_overlayGalaxyPositionA),
 				PositionUnits::DIPs,
-				float2(768.0f, 1366.0f),
+				float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 				SizeUnits::Pixels);
 
 			CurrentSpriteBatch->Draw(
 				m_overlayGalaxyB.Get(),
 				float2(Manager->m_windowBounds.Width / 2, m_overlayGalaxyPositionB),
 				PositionUnits::DIPs,
-				float2(768.0f, 1366.0f),
+				float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 				SizeUnits::Pixels);
 		}
 

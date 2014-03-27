@@ -4,6 +4,13 @@
 using namespace Coding4Fun::FallFury::Screens;
 using namespace Windows::Graphics::Display;
 
+namespace Coding4Fun {
+	namespace FallFury {
+		extern float ScreenWidth;
+		extern float ScreenHeight;
+	}
+}
+
 GameScreenBase::GameScreenBase()
 {
 
@@ -45,25 +52,32 @@ void GameScreenBase::Update(float timeTotal, float timeDelta)
 }
 
 
+
 void GameScreenBase::UpdateWindowSize()
 {
 	auto rWidth = Manager->m_renderTargetSize.Width;
 	auto rHeight = Manager->m_renderTargetSize.Height;
 
-	BACKGROUND_MIDPOINT = 1366.0f / 2.0f;
+#ifndef WP8
+	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenWidth / 2.0f;
+#else
+	// TODO: (sanjeevd) This is hacky. Not really sure why the scale factors are here, or why this
+	// scale factor and swapping height for width works, but whatever.
+	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenHeight / 2.2f;
+#endif
 
 	m_backgroundPositionA = BACKGROUND_MIDPOINT;
 	m_backgroundPositionB = m_backgroundPositionA * 3;
 
-	LoBoundX = (rWidth - 768.0f) / 2.0f;
-	HiBoundX = LoBoundX + 768.0f;
+	LoBoundX = (rWidth - Coding4Fun::FallFury::ScreenHeight) / 2.0f;
+	HiBoundX = LoBoundX + Coding4Fun::FallFury::ScreenHeight;
 
 	LoBoundY = 0;
 	HiBoundY = LoBoundY + rHeight;
 
 	//m_screenSize = float2(768.0f, rHeight);	
 
-	m_screenSize = float2(768.0f, 1366.0f);
+	m_screenSize = float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth);
 }
 
 // TODO: (sanjeevd) This is where the background movement actually happens

@@ -55,7 +55,9 @@ void MenuItem::Grid_ManipulationCompleted(Platform::Object^ sender, Windows::UI:
 	
 	if (diff > maxDeltaSize - 50) // slight buffer
 	{
+#ifndef WP8
 		slideMenuMedia->Play();
+#endif
 		OnButtonSelected(this, Label);
 	}
 

@@ -65,6 +65,7 @@
       <Filter>Audio</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Constants.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
@@ -111,6 +112,7 @@
       <Filter>Audio</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Constants.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="$(MSBuildThisFileDirectory)Shaders\GeometryShader.gs.hlsl">
@@ -703,6 +705,21 @@
     </Image>
     <Image Include="$(MSBuildThisFileDirectory)DDS\stuffing.dds">
       <Filter>DDS</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\double_arrow.png">
+      <Filter>MenuItems</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuexpanded.png">
+      <Filter>MenuItems</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuexpanded_2.png">
+      <Filter>MenuItems</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\menuitem.png">
+      <Filter>MenuItems</Filter>
+    </Image>
+    <Image Include="$(MSBuildThisFileDirectory)MenuItems\single_arrow.png">
+      <Filter>MenuItems</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
