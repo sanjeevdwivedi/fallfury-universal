@@ -1,8 +1,9 @@
 #pragma once
-
-#include "pch.h"
+#include "Xaudio2.h"
+#include "Xaudio2fx.h"
 #include <collection.h>
-
+#include "DXCore\SpriteWorks.h"
+#include "DXCore\\BasicLoader.h"
 using namespace Windows::Foundation;
 using namespace Coding4Fun::FallFury::DXCore;
 using namespace Coding4Fun::FallFury::DXCore::BasicSprites;
@@ -62,7 +63,7 @@ namespace Coding4Fun
 				float													m_backgroundPositionB;
 
 				float													BACKGROUND_MIDPOINT;
-				BasicLoader^											m_loader;
+				BasicLoader^				m_loader;
 			private:
 				float													m_loBoundX;
 				float													m_hiBoundX;

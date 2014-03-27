@@ -6,6 +6,7 @@
 #include "Entities\LevelType.h"
 #include "pch.h"
 #include "Audio\AudioEngine.h"
+#include "GameScreens\GameScreenBase.h"
 
 using namespace Coding4Fun::FallFury::Entities;
 

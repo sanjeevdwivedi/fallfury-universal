@@ -4,7 +4,7 @@
 #include "Helpers\BasicMath.h"
 #include <string>
 #include "Characters\LivingEntityState.h"
-
+#include "DXCore\SpriteWorks.h"
 
 namespace Coding4Fun
 {

@@ -6,6 +6,7 @@
 //// Copyright (c) Microsoft Corporation. All rights reserved
 
 #include "pch.h"
+#include "XAudio2.h"
 #include "DXCore\DirectXLinker.h"
 #include "AudioEngine.h"
 

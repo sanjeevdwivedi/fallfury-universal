@@ -18,7 +18,7 @@ DirectXBase::DirectXBase() :
 }
 
 // Initialize the DirectX resources required to run.
-void DirectXBase::Initialize(CoreWindow^ window, SwapChainBackgroundPanel^ panel, float dpi)
+void DirectXBase::Initialize(CoreWindow^ window, SwapChainPanel^ panel, float dpi)
 {
 	m_window = window;
 	m_panel = panel;
@@ -249,7 +249,7 @@ void DirectXBase::CreateWindowSizeDependentResources()
 			dxgiAdapter->GetParent(IID_PPV_ARGS(&dxgiFactory))
 			);
 
-		// Create the swap chain and then associate it with the SwapChainBackgroundPanel.
+		// Create the swap chain and then associate it with the SwapChainPanel.
 		ThrowIfFailed(
 			dxgiFactory->CreateSwapChainForComposition(
 				m_d3dDevice.Get(),
@@ -259,7 +259,7 @@ void DirectXBase::CreateWindowSizeDependentResources()
 				)
 			);
 
-		ComPtr<ISwapChainBackgroundPanelNative> panelNative;
+		ComPtr<ISwapChainPanelNative> panelNative;
 		ThrowIfFailed(
 			reinterpret_cast<IUnknown*>(m_panel)->QueryInterface(IID_PPV_ARGS(&panelNative))
 			);

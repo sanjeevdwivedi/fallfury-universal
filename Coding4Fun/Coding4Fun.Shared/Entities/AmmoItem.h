@@ -1,6 +1,9 @@
 #pragma once
 #include "ParticleSystem\ParticleCore.h"
 #include "DXCore\SpriteWorks.h"
+#include "Entities\Powerup.h"
+#include "Entities\PowerupCategory.h"
+#include "Entities\PowerupType.h"
 
 namespace Coding4Fun
 {

@@ -8,6 +8,7 @@
 #include "Entities\LevelType.h"
 #include "Entities\Button.h"
 #include "Audio\AudioManager.h"
+#include "Entities\Obstacle.h"
 
 namespace Coding4Fun
 {

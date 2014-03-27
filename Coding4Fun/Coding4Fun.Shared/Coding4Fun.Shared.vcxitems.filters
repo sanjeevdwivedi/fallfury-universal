@@ -18,9 +18,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.h">
       <Filter>Content</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\AudioEngine.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\AudioManager.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\Bear.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Characters\LivingEntityState.h" />
@@ -65,7 +62,15 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)ParticleSystem\ParticleSet.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)ScreenManager.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml.h" />
-    <ClInclude Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\AudioEngine.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\AudioManager.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Coding4FunMain.cpp" />
@@ -79,9 +84,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Content\SampleFpsTextRenderer.cpp">
       <Filter>Content</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\AudioEngine.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\AudioManager.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Bear.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Livingentity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Characters\Monster.cpp" />
@@ -112,7 +114,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)ParticleSystem\ParticleSet.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)ScreenManager.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml.cpp" />
-    <ClCompile Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\AudioEngine.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\AudioManager.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="$(MSBuildThisFileDirectory)Content\SamplePixelShader.hlsl">
@@ -146,6 +156,15 @@
     </Filter>
     <Filter Include="Shaders">
       <UniqueIdentifier>{02a7d0c5-439d-4873-b87a-ef161bb2538e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{89f3ba89-a442-4d8f-8e92-c2be66b313f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{68f5ba64-1b4f-4573-8ba7-b8ddbb5eb0dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MenuItems">
+      <UniqueIdentifier>{38e095f9-fe56-4b02-9ff9-625ee09c667c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -325,10 +344,18 @@
     <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Wind.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="$(MSBuildThisFileDirectory)Common\FallFuryStyles.xaml" />
-    <Page Include="$(MSBuildThisFileDirectory)Common\StandardStyles.xaml" />
-    <Page Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml" />
-    <Page Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml" />
+    <Page Include="$(MSBuildThisFileDirectory)Common\FallFuryStyles.xaml">
+      <Filter>Common</Filter>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Common\StandardStyles.xaml">
+      <Filter>Common</Filter>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\HealthBar.xaml">
+      <Filter>Controls</Filter>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml">
+      <Filter>MenuItems</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_and_beyond.xml" />

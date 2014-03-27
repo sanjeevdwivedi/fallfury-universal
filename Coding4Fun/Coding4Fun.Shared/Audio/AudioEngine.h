@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "Xaudio2.h"
+#include "Xaudio2fx.h"
 #include "Audio\MediaStreamer.h"
 #include "Helpers\BasicMath.h"
 

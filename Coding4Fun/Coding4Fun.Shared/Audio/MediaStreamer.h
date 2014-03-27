@@ -6,6 +6,10 @@
 //// Copyright (c) Microsoft Corporation. All rights reserved
 
 #pragma once
+#include <mmreg.h>
+#include <mfidl.h>
+#include <mfapi.h>
+#include <Mfreadwrite.h>
 
 namespace Coding4Fun
 {

@@ -1,26 +1,805 @@
 ﻿<Page
-    x:Class="Coding4Fun.DirectXPage"
+    x:Class="Coding4Fun.FallFury.DirectXPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Coding4Fun"
+    xmlns:local="using:Coding4Fun.FallFury"
+    xmlns:controls="using:Coding4Fun.FallFury.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="OnLoaded" KeyDown="OnKeyDown" LayoutUpdated="XAMLPage_LayoutUpdated">
 
-  <SwapChainPanel x:Name="swapChainPanel">
-    <TextBlock Text="Hello from XAML!"
-               HorizontalAlignment="Right"
-               VerticalAlignment="Top"
-               FontSize="30" />
-  </SwapChainPanel>
+    <SwapChainPanel  x:Name="XAMLPage">
 
-  <Page.BottomAppBar>
-    <AppBar x:Name="bottomAppBar" Padding="10,0,10,0">
-      <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-        <AppBarButton AutomationProperties.Name="Sample Button"
-                      AutomationProperties.AutomationId="SampleAppBarButton"
-                      Click="AppBarButton_Click"/>
-      </StackPanel>
-    </AppBar>
-  </Page.BottomAppBar>
-</Page>
+        <Grid HorizontalAlignment="Left" x:Name="containerA">
+            <Rectangle Fill="#09bbe3" />
+
+            <Rectangle Width="10" HorizontalAlignment="Left">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#a000" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#0000" Offset="1.0"></GradientStop>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+
+        <Grid HorizontalAlignment="Right" x:Name="containerB">
+            <Rectangle Fill="#09bbe3" />
+
+            <Rectangle Width="10" HorizontalAlignment="Right">
+                <Rectangle.Fill>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                        <GradientStop Color="#a000" Offset="0.0"></GradientStop>
+                        <GradientStop Color="#0000" Offset="1.0"></GradientStop>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+
+
+        <Grid x:Name="grdMain" Width="768">
+            <Grid.Resources>
+                <Storyboard Completed="FadeInCompleted" x:Key="FadingIn" Storyboard.TargetName="TransitionRectangle" Storyboard.TargetProperty="Opacity" >
+                    <DoubleAnimation From="0" To="1" Duration="0:0:0.07"></DoubleAnimation>
+                </Storyboard>
+
+                <Storyboard Completed="FadeOutCompleted" x:Key="FadingOut" Storyboard.TargetName="TransitionRectangle" Storyboard.TargetProperty="Opacity" >
+                    <DoubleAnimation From="1" To="0" Duration="0:0:0.07"></DoubleAnimation>
+                </Storyboard>
+
+                <Storyboard x:Key="StoryboardChainA" Completed="StoryboardChainA_Completed">
+                    <DoubleAnimationUsingKeyFrames RepeatBehavior="0:0:6"
+                  Storyboard.TargetName="imgHTBear"
+                  Storyboard.TargetProperty="(RenderTransform).X" BeginTime="0:0:0">
+                        <LinearDoubleKeyFrame
+                    Value="-200" KeyTime="0:0:1"/>
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:2"/>
+                        <LinearDoubleKeyFrame
+                    Value="200" KeyTime="0:0:3"/>
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:4"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHowToMovement"
+                  Storyboard.TargetProperty="Opacity" BeginTime="0:0:6">
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:1"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHowToPowerups"
+                  Storyboard.TargetProperty="Opacity" BeginTime="0:0:7">
+                        <LinearDoubleKeyFrame
+                    Value="1" KeyTime="0:0:1"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHTPowerupIcons"
+                  Storyboard.TargetProperty="(RenderTransform).Y" RepeatBehavior="0:0:6" BeginTime="0:0:8">
+                        <LinearDoubleKeyFrame
+                    Value="-12" KeyTime="0:0:1"/>
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:2"/>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+
+                <Storyboard x:Key="StoryboardChainB" Completed="StoryboardChainB_Completed">
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHowToPowerups"
+                  Storyboard.TargetProperty="Opacity" BeginTime="0:0:0">
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:1"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHowToMonsters"
+                  Storyboard.TargetProperty="Opacity" BeginTime="0:0:1">
+                        <LinearDoubleKeyFrame
+                    Value="1" KeyTime="0:0:1"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="imgHTMonsterA"
+                  Storyboard.TargetProperty="(RenderTransform).Y" RepeatBehavior="0:0:6" BeginTime="0:0:1">
+                        <LinearDoubleKeyFrame
+                    Value="20" KeyTime="0:0:1"/>
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:2"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="imgHTMonsterB"
+                  Storyboard.TargetProperty="(RenderTransform).Y" RepeatBehavior="0:0:6" BeginTime="0:0:1">
+                        <LinearDoubleKeyFrame
+                    Value="-20" KeyTime="0:0:1"/>
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:2"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="imgHTMonsterC"
+                  Storyboard.TargetProperty="(RenderTransform).Y" RepeatBehavior="0:0:6" BeginTime="0:0:1">
+                        <LinearDoubleKeyFrame
+                    Value="20" KeyTime="0:0:1"/>
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:2"/>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+
+                <Storyboard x:Key="StoryboardChainC" Completed="StoryboardChainC_Completed">
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHowToMonsters"
+                  Storyboard.TargetProperty="Opacity" BeginTime="0:0:0">
+                        <LinearDoubleKeyFrame
+                    Value="0" KeyTime="0:0:1"/>
+                    </DoubleAnimationUsingKeyFrames>
+
+                    <DoubleAnimationUsingKeyFrames
+                  Storyboard.TargetName="stkHowToMovement"
+                  Storyboard.TargetProperty="Opacity" BeginTime="0:0:1">
+                        <LinearDoubleKeyFrame
+                    Value="1" KeyTime="0:0:1"/>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </Grid.Resources>
+
+            <Grid x:Name="stkMainMenu" Visibility="Collapsed">
+                <StackPanel x:Name="stkLogo" Orientation="Vertical" Style="{StaticResource MenuTextPlacement}">
+                    <Image
+                    Source="ms-appx:///Assets/FallFuryLogo.png"
+                    Height="170"
+                    Margin="-6, 0, 0, -3"
+                    HorizontalAlignment="Left">
+                        <Image.RenderTransform>
+                            <TranslateTransform x:Name="LogoTranslation"></TranslateTransform>
+                        </Image.RenderTransform>
+                    </Image>
+                </StackPanel>
+
+                <StackPanel x:Name="stkMainMenuButtons" Style="{StaticResource MenuPlacement}">
+                    <local:MenuItem x:Name="btnNewGame" Label="new game">
+                        <local:MenuItem.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </local:MenuItem.RenderTransform>
+                    </local:MenuItem>
+                    <local:MenuItem x:Name="btnHowTo" Label="how to play">
+                        <local:MenuItem.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </local:MenuItem.RenderTransform>
+                    </local:MenuItem>
+                    <local:MenuItem x:Name="btnShowTopScores" Label="top scores">
+                        <local:MenuItem.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </local:MenuItem.RenderTransform>
+                    </local:MenuItem>
+                    <local:MenuItem x:Name="btnSettings" Label="settings">
+                        <local:MenuItem.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </local:MenuItem.RenderTransform>
+                    </local:MenuItem>
+                    <local:MenuItem x:Name="btnAbout"  Label="about">
+                        <local:MenuItem.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </local:MenuItem.RenderTransform>
+                    </local:MenuItem>
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="stkLevelSelector" Visibility="Collapsed" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Rectangle Style="{StaticResource BackgroundRectangle}" />
+
+                        <StackPanel Style="{StaticResource MenuTextPlacementTopOverride}">
+                            <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">PICK</TextBlock>
+                            <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">LEVEL</TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+                    <ScrollViewer Background="Transparent" Grid.Row="1" VerticalScrollMode="Auto" HorizontalScrollMode="Disabled" Margin="0,0,0,40">
+                        <ItemsControl
+                        x:Name="stkLevelContainer"
+                        Margin="0" />
+                    </ScrollViewer>
+
+                    <StackPanel Grid.Row="2">
+                        <local:MenuItem
+                        x:Name="btnLSHome"
+                        Style="{StaticResource HomeMenuButton}">
+                            <local:MenuItem.RenderTransform>
+                                <TranslateTransform></TranslateTransform>
+                            </local:MenuItem.RenderTransform>
+                        </local:MenuItem>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="grdLoading" Visibility="Collapsed">
+                <Rectangle Style="{StaticResource BackgroundRectangle}" />
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TitleTextStyle}"  Text="Loading..." />
+            </Grid>
+
+            <Grid x:Name="Hud" VerticalAlignment="Top" Visibility="Collapsed">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Fill="Black" Grid.ColumnSpan="4" />
+
+                <Button
+                Grid.Column="0"
+                x:Name="btnPause"
+                Click="btnPause_Click"
+                Style="{StaticResource PauseButton}">
+                    <Image Source="ms-appx:///Assets/HUD/pauseButton.png" Stretch="None" />
+                </Button>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/HUD/buttonHud.png" Stretch="None" />
+
+                    <TextBlock
+                    x:Name="txtButtons"
+                    Text="0"
+                    Style="{StaticResource hudResult}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/HUD/clockHud.png" Stretch="None" />
+
+                    <TextBlock
+                    x:Name="txtTimer"
+                    Text="00:00"
+                    Style="{StaticResource hudResult}"/>
+                </StackPanel>
+
+                <Image
+                Grid.Column="3"
+                Source="ms-appx:///Assets/HUD/heartHud.png"
+                Stretch="None" />
+
+                <Grid
+                Grid.Column="3"
+                Grid.Row="1">
+                    <Rectangle Fill="Black" Opacity=".8"/>
+                    <controls:HealthBar x:Name="healthBar"></controls:HealthBar>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="grdPaused" Visibility="Collapsed">
+                <Rectangle Style="{StaticResource BackgroundRectangle}" />
+
+                <StackPanel  x:Name="stkPauseControls" Style="{StaticResource MenuPlacement}">
+                    <Viewbox Margin="8,0,0,0" HorizontalAlignment="Left" Height="110">
+                        <TextBlock Style="{StaticResource BaseApplicationText}" Foreground="Red">PAUSE</TextBlock>
+                    </Viewbox>
+                    <local:MenuItem x:Name="btnPauseResume" Label="resume" />
+                    <local:MenuItem x:Name="btnPauseRestartLevel" Label="restart level" />
+                    <local:MenuItem x:Name="btnPauseSettings" Label="settings" />
+                    <local:MenuItem x:Name="btnPauseHome" Style="{StaticResource HomeMenuButton}" />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="grdSubmitScore" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Rectangle Style="{StaticResource BackgroundRectangle}" />
+
+                    <StackPanel Style="{StaticResource MenuTextPlacementTopOverride}">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">SUBMIT</TextBlock>
+                        <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">SCORE</TextBlock>
+                    </StackPanel>
+                </Grid>
+
+                <Image Margin="0,0,24,0" VerticalAlignment="Top" Grid.Row="1" x:Name="imgWinMedal" HorizontalAlignment="Right" Width="107" Height="157"></Image>
+
+                <StackPanel Margin="8,0,0,0" Grid.Row="1">
+                    <StackPanel Margin="0,0,24,24">
+                        <TextBlock Foreground="Red" Style="{StaticResource MenuItemText}">you scored:</TextBlock>
+                        <TextBlock x:Name="txtSubmitScoreView" Style="{StaticResource ScorePreviewTextBlock}"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,24,24">
+                        <TextBlock Foreground="Red" Style="{StaticResource MenuItemText}">name:</TextBlock>
+
+                        <Grid>
+                            <TextBlock x:Name="txtWatermark" Margin="24,12,24,0" FontSize="40" FontStyle="Italic" Height="60" Text="enter your name here" Foreground="Black" Visibility="{Binding ElementName=txtPlayerName, Path=Text.IsEmpty}"></TextBlock>
+                            <TextBox x:Name="txtPlayerName" FontSize="30" Height="60" Margin="12,0,12,0" />
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource MenuPlacement}" VerticalAlignment="Bottom" Grid.Row="2">
+                    <local:MenuItem x:Name="btnOKSubmitScore" Label="ok"/>
+                    <local:MenuItem x:Name="btnSOMenu" Style="{StaticResource HomeMenuButton}" />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="grdTopScores" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Rectangle Style="{StaticResource BackgroundRectangle}" />
+
+                    <StackPanel Style="{StaticResource MenuTextPlacementTopOverride}">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">TOP</TextBlock>
+                        <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">SCORES</TextBlock>
+                    </StackPanel>
+                </Grid>
+
+                <Grid x:Name="TopScoreItemContainer" Grid.Row="1">
+                    <!--here we will have the item container-->
+                </Grid>
+
+                <StackPanel Style="{StaticResource MenuPlacement}" Grid.Row="2">
+                    <local:MenuItem x:Name="btnReturnToMenu" Style="{StaticResource HomeMenuButton}" />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="grdHowTo" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel x:Name="stkHowToMovement" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Margin="0,0,0,24" Text="MOVEMENT" TextAlignment="Center" Width="600" TextWrapping="Wrap" Style="{StaticResource MenuTextPrimaryBlock}" />
+                    <Image x:Name="imgHTBear" Height="200" Source="ms-appx:///Assets/Bear/full_body.png">
+                        <Image.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock TextAlignment="Center" Margin="0,24,0,0" Width="600" TextWrapping="Wrap" Style="{StaticResource ScoreText}">TABLET/SLATE: TILT THE DEVICE or TOUCH in the direction you want to move.</TextBlock>
+                    <TextBlock TextAlignment="Center" Margin="0,24,0,0"  Width="600" TextWrapping="Wrap" Style="{StaticResource ScoreText}">DESKTOP PC: use LEFT and RIGHT arrow keys or the MOUSE.</TextBlock>
+                </StackPanel>
+
+                <StackPanel Opacity="0" x:Name="stkHowToPowerups" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Margin="0,0,0,24" Text="POWERUPS" TextAlignment="Center" Width="600" TextWrapping="Wrap" Style="{StaticResource MenuTextPrimaryBlock}" />
+
+                    <StackPanel x:Name="stkHTPowerupIcons"  HorizontalAlignment="Center" Orientation="Horizontal">
+                        <StackPanel.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </StackPanel.RenderTransform>
+
+                        <Image Margin="0,0,24,0" Height="100" Source="ms-appx:///Assets/Powerups/cape.png">
+                        </Image>
+
+                        <Image Margin="0,0,24,0" Height="100" Source="ms-appx:///Assets/Powerups/parachute.png">
+                        </Image>
+
+                        <Image Height="100" Source="ms-appx:///Assets/Powerups/helmet.png">
+                        </Image>
+                    </StackPanel>
+
+                    <TextBlock TextAlignment="Center" Margin="0,24,0,0" Width="600" TextWrapping="Wrap" Style="{StaticResource ScoreText}">Make sure to pick these up, they will help you through your journey.</TextBlock>
+                </StackPanel>
+
+                <StackPanel Opacity="0" x:Name="stkHowToMonsters" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Margin="0,0,0,24" Text="MONSTERS" TextAlignment="Center" Width="600" TextWrapping="Wrap" Style="{StaticResource MenuTextPrimaryBlock}" />
+
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Image x:Name="imgHTMonsterA" Margin="0,0,24,0" Height="100" Source="ms-appx:///Assets/Monsters/demoboss1.png">
+                            <Image.RenderTransform>
+                                <TranslateTransform></TranslateTransform>
+                            </Image.RenderTransform>
+                        </Image>
+
+                        <Image x:Name="imgHTMonsterB" Margin="0,0,24,0" Height="100" Source="ms-appx:///Assets/Monsters/demoboss2.png">
+                            <Image.RenderTransform>
+                                <TranslateTransform></TranslateTransform>
+                            </Image.RenderTransform>
+                        </Image>
+
+                        <Image x:Name="imgHTMonsterC" Height="100" Source="ms-appx:///Assets/Monsters/demoboss3.png">
+                            <Image.RenderTransform>
+                                <TranslateTransform></TranslateTransform>
+                            </Image.RenderTransform>
+                        </Image>
+                    </StackPanel>
+
+                    <TextBlock TextAlignment="Center" Margin="0,24,0,0" Width="600" TextWrapping="Wrap" Style="{StaticResource ScoreText}">
+                    These guys are out to get you! TAP or CLICK on them to shoot and clear the path.
+                    </TextBlock>
+                </StackPanel>
+
+                <Grid Grid.Row="0">
+                    <Rectangle Style="{StaticResource BackgroundRectangle}" />
+
+                    <StackPanel Style="{StaticResource MenuTextPlacementTopOverride}">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">HOW</TextBlock>
+                        <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">TO</TextBlock>
+                    </StackPanel>
+                </Grid>
+
+                <StackPanel Grid.Row="2">
+                    <local:MenuItem
+                        x:Name="btnHTHome"
+                        Style="{StaticResource HomeMenuButton}">
+                        <local:MenuItem.RenderTransform>
+                            <TranslateTransform></TranslateTransform>
+                        </local:MenuItem.RenderTransform>
+                    </local:MenuItem>
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="grdGameOver" Visibility="Collapsed" VerticalAlignment="Bottom">
+                <!--<StackPanel Style="{StaticResource MenuTextPlacement}">
+               
+            </StackPanel>-->
+
+                <StackPanel VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">GAME</TextBlock>
+                        <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">OVER</TextBlock>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <local:MenuItem x:Name="btnGORestart" Label="play again" />
+                    </StackPanel>
+                    <local:MenuItem
+                    x:Name="btnGOMenu"
+                    Style="{StaticResource HomeMenuButton}" />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="grdWinner" Visibility="Collapsed">
+                <StackPanel Style="{StaticResource MenuPlacement}">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">YOU</TextBlock>
+                        <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">WIN!</TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <local:MenuItem x:Name="btnYWNextLevel" Label="next level" />
+                        <local:MenuItem x:Name="btnShare" Label="share"/>
+                        <local:MenuItem x:Name="btnGOSubmitScore" Label="submit score" />
+                        <local:MenuItem x:Name="btnYWMenu" Style="{StaticResource HomeMenuButton}" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="grdCompleteWin" Visibility="Collapsed">
+                <StackPanel VerticalAlignment="Bottom">
+                    <StackPanel Orientation="Horizontal" Margin="8,0,0,8">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">YOU</TextBlock>
+                        <TextBlock Style="{StaticResource MenuTextSecondaryBlock}">WIN!</TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <local:MenuItem x:Name="btnCGOK" Label="continue" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid VerticalAlignment="Top" Name="ResultPanel" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!-- 0 - result title -->
+                    <RowDefinition Height="15" />
+                    <!-- already has a 10 margin -->
+                    <RowDefinition />
+                    <!-- 2 - title blocks -->
+                    <RowDefinition />
+                    <!-- 3 - score bits and parts -->
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="50"/>
+                    <!-- 5 - metal -->
+                    <RowDefinition />
+                    <!-- 6 - overflow for metal -->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <!-- 0 - gap -->
+                    <ColumnDefinition Width=".7*" />
+                    <!-- 1 - time -->
+                    <ColumnDefinition Width="*" />
+                    <!-- 2 - coins -->
+                    <ColumnDefinition Width=".7*" />
+                    <!-- 3 - enemies -->
+                    <ColumnDefinition Width="50" />
+                    <!-- 4 - total / metal -->
+                    <ColumnDefinition Width="*" />
+                    <!-- 4 - total / metal type -->
+
+                </Grid.ColumnDefinitions>
+                <Rectangle
+                Grid.RowSpan="6"
+                Grid.ColumnSpan="6"
+                Style="{StaticResource BackgroundRectangle}" />
+                <StackPanel
+                Grid.ColumnSpan="6"
+                Style="{StaticResource MenuTextPlacementTopOverride}">
+                    <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">
+                    RESULTS
+                    </TextBlock>
+                </StackPanel>
+
+                <TextBlock
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource BaseSmallResultTitleText}"
+                Text="TIME" />
+                <TextBlock
+                Grid.Row="2"
+                Grid.Column="2"
+                Style="{StaticResource BaseSmallResultTitleText}"
+                Text="COINS" />
+                <TextBlock
+                Grid.Row="2"
+                Grid.Column="3"
+                Style="{StaticResource BaseSmallResultTitleText}"
+                Text="ENEMIES" />
+                <TextBlock
+                Grid.Row="2"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource BaseSmallResultTitleText}"
+                Text="TOTAL" />
+
+                <TextBlock
+                Grid.Row="3"
+                Grid.Column="1"
+                Style="{StaticResource BaseSmallResultText}"
+                Text="00:00"
+                Name="TotalTime" />
+                <StackPanel
+                Grid.Row="3"
+                Grid.Column="2"
+                Orientation="Horizontal">
+                    <TextBlock
+                    Style="{StaticResource BaseSmallResultText}"
+                    Text="298"
+                    Name="TotalCoinsCollected" />
+                    <TextBlock
+                    Style="{StaticResource BaseSmallResultTitleText}"
+                    VerticalAlignment="Bottom"
+                    Margin="0, 0, 0, 5"
+                    FontWeight="Normal">
+                    <Run Text="/" />
+                    <Run x:Name="TotalCoinsInLevel" Text="350" />
+                    </TextBlock>
+                </StackPanel>
+
+                <TextBlock
+                Grid.Row="3"
+                Grid.Column="3"
+                Style="{StaticResource BaseSmallResultText}"
+                Text="49"
+                Name="TotalEnemiesKilled"/>
+                <TextBlock
+                Grid.Row="3"
+                Grid.Column="4"
+                Grid.ColumnSpan="2"
+
+                Style="{StaticResource BaseSmallResultText}"
+                Text="40,000"
+                Name="TotalScore"/>
+
+
+                <!-- height is here to prove the break -->
+                <!-- Create styles for Gold/Silver/Bronze rewards -->
+                <Image
+                Grid.Row="5"
+                Grid.Column="4"
+                Grid.RowSpan="2"
+                Stretch="Uniform"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Source="Assets/Medals/bronze.png"
+                Height="100"
+                x:Name="MedalImage"
+                />
+                <TextBlock
+                Grid.Row="5"
+                Grid.Column="6"
+                Style="{StaticResource ResultScreenMedalBronze}"
+                Name="txtMedalType"/>
+            </Grid>
+
+            <Grid x:Name="grdAbout" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Rectangle Style="{StaticResource BackgroundRectangle}" />
+
+                    <StackPanel Style="{StaticResource MenuTextPlacementTopOverride}">
+                        <TextBlock Style="{StaticResource MenuTextPrimaryBlock}">ABOUT</TextBlock>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1" VerticalAlignment="Top" Margin="8,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="CODE" Grid.Row="0" Style="{StaticResource AboutRole}" />
+                    <TextBlock Text="PROJECT" Grid.Row="1" Style="{StaticResource AboutRole}" />
+                    <TextBlock Text="ADVISOR" Grid.Row="2" Style="{StaticResource AboutRole}" />
+                    <TextBlock Text="ADVISOR" Grid.Row="3" Style="{StaticResource AboutRole}" />
+                    <TextBlock Text="ART" Grid.Row="4" Style="{StaticResource AboutRole}" />
+                    <TextBlock Text="MUSIC" Grid.Row="5" Style="{StaticResource AboutRole}" />
+
+                    <TextBlock Text="DENIS DELIMARSCHI" Grid.Row="0" Style="{StaticResource AboutPerson}" />
+                    <TextBlock Text="CLINT RUTKAS" Grid.Row="1" Style="{StaticResource AboutPerson}" />
+                    <TextBlock Text="BRIAN PEEK" Grid.Row="2" Style="{StaticResource AboutPerson}" />
+                    <TextBlock Text="RICK BARRAZA" Grid.Row="3" Style="{StaticResource AboutPerson}" />
+                    <TextBlock Text="TOLEDO DESIGN" Grid.Row="4" Style="{StaticResource AboutPerson}" />
+                    <TextBlock Text="DAVID WALLIMANN" Grid.Row="5" Style="{StaticResource AboutPerson}" />
+                    <TextBlock 
+					HorizontalAlignment="Left" 
+					Grid.Row="6"
+					Grid.ColumnSpan="2"
+					Grid.Column="0"
+					Margin="0, 10"
+					Style="{StaticResource AboutPerson}">
+					A CODING4FUN PROJECT
+                    </TextBlock>
+                </Grid>
+                <StackPanel Style="{StaticResource MenuPlacement}" Grid.Row="2">
+                    <local:MenuItem x:Name="btnABHome" Style="{StaticResource HomeMenuButton}" />
+                </StackPanel>
+            </Grid>
+
+            <Rectangle Fill="Black" Opacity="0" x:Name="TransitionRectangle"></Rectangle>
+
+            <Grid x:Name="stkSnapped" Visibility="Collapsed">
+                <Grid.Background>
+                    <SolidColorBrush Color="#09bbe3"></SolidColorBrush>
+                </Grid.Background>
+
+                <Image Source="ms-appx:///Assets/FallFuryLogo.png" Stretch="Uniform" Margin="24,0,0,0" Height="50" VerticalAlignment="Center" HorizontalAlignment="Left"></Image>
+            </Grid>
+        </Grid>
+
+        <Popup HorizontalAlignment="Right" IsLightDismissEnabled="True" x:Name="stkMusicSfx" >
+            <Grid Background="Black" x:Name="grdSubMusicSfx"  Width="346">
+                <Grid.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </Grid.Transitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="24,12,0,0" >
+                    <Button Margin="0" VerticalAlignment="Center" x:Name="dismissAudioSettings" Click="dismissAudioSettings_Click" Style="{StaticResource BackButtonStyle}"></Button>
+                    <TextBlock Margin="12,0,0,12" Height="Auto" VerticalAlignment="Center" Text="Music &amp; SFX" Style="{StaticResource SubheaderTextStyle}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="24,24,0,0">
+                    <StackPanel>
+                        <TextBlock Text="Music" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <TextBlock  Width="346" Text="This includes the theme track and level background music." Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap" Margin="0,12,12,12" ></TextBlock>
+                        <ToggleSwitch x:Name="tglMusic" Toggled="tglMusic_Toggled" IsOn="{Binding ElementName=XAMLPage,Path=MusicEnabled}" Margin="-6,0,0,0"></ToggleSwitch>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,24,0,0">
+                        <TextBlock Text="Music Volume" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <Slider x:Name="sldMusicVolume" ValueChanged="sldMusicVolume_ValueChanged" Value="{Binding ElementName=XAMLPage,Path=MusicVolume, Mode=TwoWay}" Minimum="0" Maximum="100" Margin="0,0,12,0"></Slider>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,24,0,0">
+                        <TextBlock Text="Sound Effects" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <TextBlock Width="346" Text="Includes sounds played during the game (e.g. explosions)." Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap" Margin="0,12,12,12" ></TextBlock>
+                        <ToggleSwitch x:Name="tglSFX" Toggled="tglSFX_Toggled" IsOn="{Binding ElementName=XAMLPage,Path=SFXEnabled}" Margin="-6,0,0,0"></ToggleSwitch>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,24,0,0">
+                        <TextBlock Text="SFX Volume" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <Slider x:Name="sldSFXVolume" ValueChanged="sldSFXVolume_ValueChanged" Value="{Binding ElementName=XAMLPage,Path=SFXVolume, Mode=TwoWay}" Minimum="0" Maximum="100" Margin="0,0,12,0"></Slider>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Grid>
+        </Popup>
+
+        <Popup HorizontalAlignment="Right" IsLightDismissEnabled="True" x:Name="stkAccelerometerSettings" >
+            <Grid Background="Black" x:Name="grdAccelerometerSettings" Width="346">
+                <Grid.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </Grid.Transitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="24,12,0,0" >
+                    <Button Margin="0" VerticalAlignment="Center" x:Name="dismissAccelerometerSettings" Click="dismissAccelerometerSettings_Click" Style="{StaticResource BackButtonStyle}"></Button>
+                    <TextBlock Margin="12,0,0,12" Height="Auto" VerticalAlignment="Center" Text="Accelerometer" Style="{StaticResource SubheaderTextStyle}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="24,24,0,0">
+                    <StackPanel>
+                        <TextBlock Text="Enable Accelerometer" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <TextBlock  Width="346" Text="If the accelerometer is disabled, you will not be able to use device tilt to move the bear." Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap" Margin="0,12,12,12" ></TextBlock>
+                        <ToggleSwitch x:Name="tglEnableAccelerometer" Toggled="tglEnableAccelerometer_Toggled" IsOn="{Binding ElementName=XAMLPage,Path=IsAccelerometerEnabled}" Margin="-6,0,0,0"></ToggleSwitch>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,24,0,0">
+                        <TextBlock Text="Invert Accelrometer" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <TextBlock Width="346" Text="Moves the bear in the opposite direction of the device tilt." Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap" Margin="0,12,12,12" ></TextBlock>
+                        <ToggleSwitch x:Name="tglInvertAccelerometer" Toggled="tglInvertAccelerometer_Toggled"  IsOn="{Binding ElementName=XAMLPage,Path=IsAccelerometerInverted}" Margin="-6,0,0,0"></ToggleSwitch>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,24,0,0">
+                        <TextBlock Text="Lock Screen Rotation" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <TextBlock Width="346" Text="Prevents the auto-rotation behavior on the application level." Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap" Margin="0,12,12,12" ></TextBlock>
+                        <ToggleSwitch x:Name="tglEnableScreenLock" Toggled="tglEnableScreenLock_Toggled_1" IsOn="{Binding ElementName=XAMLPage,Path=IsRotationLocked}" Margin="-6,0,0,0"></ToggleSwitch>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </Popup>
+
+        <Popup HorizontalAlignment="Right" IsLightDismissEnabled="True" x:Name="stkCharacterMovement" >
+            <Grid Background="Black" x:Name="grdCharacterMovement" Width="346">
+                <Grid.Transitions>
+                    <TransitionCollection>
+                        <RepositionThemeTransition />
+                    </TransitionCollection>
+                </Grid.Transitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="24,12,0,0" >
+                    <Button Margin="0" VerticalAlignment="Center" x:Name="dismissCharacterMovementSettings" Click="dismissCharacterMovementSettings_Click" Style="{StaticResource BackButtonStyle}"></Button>
+                    <TextBlock Margin="12,0,0,12" Height="Auto" VerticalAlignment="Center" Text="Character Movement" Style="{StaticResource SubheaderTextStyle}"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="24,24,0,0">
+                    <StackPanel>
+                        <TextBlock Text="Enable Mouse/Touch To Move" Style="{StaticResource BodyTextStyle}"></TextBlock>
+                        <TextBlock  Width="346" Text="Instead of using the keyboard or accelerometer, also use fingers and mouse movement to modify the position of the bear." Style="{StaticResource CaptionTextStyle}" TextWrapping="Wrap" Margin="0,12,12,12" ></TextBlock>
+                        <ToggleSwitch x:Name="tglEnableMouseMovement" Toggled="tglEnableMouseMovement_Toggled" IsOn="{Binding ElementName=XAMLPage,Path=IsMouseEnabled}" Margin="-6,0,0,0"></ToggleSwitch>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </Popup>
+    </SwapChainPanel>
+</Page>    

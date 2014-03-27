@@ -18,7 +18,7 @@ namespace Coding4Fun
 				DirectXBase();
 
 			public:
-				virtual void Initialize(Windows::UI::Core::CoreWindow^ window, Windows::UI::Xaml::Controls::SwapChainBackgroundPanel^ panel, float dpi);
+				virtual void Initialize(Windows::UI::Core::CoreWindow^ window, Windows::UI::Xaml::Controls::SwapChainPanel^ panel, float dpi);
 				virtual void CreateDeviceIndependentResources();
 				virtual void CreateDeviceResources();
 				virtual void SetDpi(float dpi);
@@ -34,7 +34,7 @@ namespace Coding4Fun
 
 			internal:
 				Platform::Agile<Windows::UI::Core::CoreWindow>         m_window;
-				Windows::UI::Xaml::Controls::SwapChainBackgroundPanel^ m_panel;
+				Windows::UI::Xaml::Controls::SwapChainPanel^ m_panel;
 
 				// Direct2D Objects
 				Microsoft::WRL::ComPtr<ID2D1Factory1>                  m_d2dFactory;

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Helpers\BasicMath.h"
 #include "ObstacleType.h"
 #include <string>

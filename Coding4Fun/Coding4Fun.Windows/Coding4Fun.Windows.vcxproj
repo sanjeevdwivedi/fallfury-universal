@@ -28,12 +28,13 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a62724bd-8620-48b9-876b-086461de90ae}</ProjectGuid>
-    <RootNamespace>Coding4Fun</RootNamespace>
+    <RootNamespace>Coding4Fun.Windows</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
     <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
+    <ProjectName>Coding4Fun.Windows</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -98,6 +99,9 @@
   <PropertyGroup>
     <PackageCertificateKeyFile>Coding4Fun.Windows_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>
       <AdditionalDependencies>d2d1.lib; d3d11.lib; dxgi.lib; ole32.lib; windowscodecs.lib; dwrite.lib; %(AdditionalDependencies)</AdditionalDependencies>
@@ -137,7 +141,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);XAUDIO2_HELPER_FUNCTIONS</PreprocessorDefinitions>
     </ClCompile>
     <FxCompile>
       <ShaderModel>4.0_level_9_3</ShaderModel>
@@ -186,6 +190,11 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Image Include="..\Coding4Fun.Shared\MenuItems\double_arrow.png" />
+    <Image Include="..\Coding4Fun.Shared\MenuItems\menuexpanded.png" />
+    <Image Include="..\Coding4Fun.Shared\MenuItems\menuexpanded_2.png" />
+    <Image Include="..\Coding4Fun.Shared\MenuItems\menuitem.png" />
+    <Image Include="..\Coding4Fun.Shared\MenuItems\single_arrow.png" />
     <Image Include="Assets\Logo.png" />
     <Image Include="Assets\SmallLogo.png" />
     <Image Include="Assets\StoreLogo.png" />
@@ -222,7 +231,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\FallFury\FallFury.XMLReader\FallFury.XMLReader\FallFury.XMLReader.csproj">
+    <ProjectReference Include="..\FallFury.XMLReader\FallFury.XMLReader.csproj">
       <Project>{73904823-7d1f-48e7-91de-22e89368e6d5}</Project>
     </ProjectReference>
   </ItemGroup>

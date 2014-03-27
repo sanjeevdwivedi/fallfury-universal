@@ -4,7 +4,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
     <ItemsProjectGuid>{7efcf217-399d-46bc-82e6-4b8718bb86e3}</ItemsProjectGuid>
-    <ItemsRootNamespace>Coding4Fun</ItemsRootNamespace>
+    <ItemsRootNamespace>Coding4Fun.FallFury</ItemsRootNamespace>
     <ItemsProjectName>Coding4Fun.Shared</ItemsProjectName>
     <SharedGUID>c64b3db3-a978-40e6-a2df-07b1cc4a1361</SharedGUID>
   </PropertyGroup>

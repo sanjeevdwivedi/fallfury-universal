@@ -12,6 +12,10 @@ using namespace Coding4Fun::FallFury::Screens;
 using namespace Coding4Fun::FallFury::Audio;
 using namespace Coding4Fun::FallFury::Helpers;
 
+//namespace Coding4Fun {
+//	namespace FallFury {
+//		namespace Screens
+//{
 GamePlayScreen::GamePlayScreen(ScreenManager^ parent)
 	: m_particleSystem(this)
 {
@@ -1113,3 +1117,6 @@ void GamePlayScreen::GameBear::set(Coding4Fun::FallFury::Characters::Bear^ value
 {
 	m_gameBear = value;
 }
+ //}
+ //}
+ //}
