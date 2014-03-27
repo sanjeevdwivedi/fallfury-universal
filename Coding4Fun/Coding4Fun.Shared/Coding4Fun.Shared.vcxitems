@@ -682,4 +682,123 @@
       <DeploymentContent>true</DeploymentContent>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\core.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_and_beyond.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_stalking.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\thorn_apart.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\chasing_monsters.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\full_pilot.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\mind.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\the_beginning.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\chasing_monsters.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\full_pilot.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\the_beginning.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lightyears_away.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lost_planet.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\rocket_power.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\stars_and_moons.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\multiple.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\single.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Death\0.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\bronze.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\gold.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\silver.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\0.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\1.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\10.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\2.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\3.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\4.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\5.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\6.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\7.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\8.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\9.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\0.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\1.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\0.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\1.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\0.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\1.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\PowerUps\0.xml">
+      <DeploymentContent>true</DeploymentContent>
+    </Xml>
+  </ItemGroup>
 </Project>

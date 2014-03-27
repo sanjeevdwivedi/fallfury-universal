@@ -232,6 +232,51 @@
     <Filter Include="DDS\Levels\Space">
       <UniqueIdentifier>{ff8ccd79-b7d4-42d4-9c6f-2cd430420fcb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Levels">
+      <UniqueIdentifier>{a4a9ee6c-21f8-4c2b-9aa7-84c05b7482c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Garden">
+      <UniqueIdentifier>{83f890d3-d3e4-4d0a-a93f-565d2d215ca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\GoGoTeddy">
+      <UniqueIdentifier>{c087b50a-9d17-4b08-b9e9-ee0d9cc889a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Nightmare">
+      <UniqueIdentifier>{6672095b-b763-4591-b941-1647831c414c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\Space">
+      <UniqueIdentifier>{ebe8f1dc-fbaa-4621-9908-0d5b608bf011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test">
+      <UniqueIdentifier>{f1e52cf6-0cf6-4869-983f-a6842b64d2e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Buttons">
+      <UniqueIdentifier>{13e90faa-a755-42c7-97c6-2422b6629e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Death">
+      <UniqueIdentifier>{c8983389-cf9f-483e-8851-e42d196c09f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Medals">
+      <UniqueIdentifier>{4511272c-be92-4c4e-9134-e6017fd8866d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Monsters">
+      <UniqueIdentifier>{b15753f0-c18f-48f1-a967-e3e4b24d02e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Obstacle">
+      <UniqueIdentifier>{2e0e8578-cca6-49d1-aa03-5dd2ab219de4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\PowerUps">
+      <UniqueIdentifier>{c44a37f3-f262-4ab8-b1f4-1d68ed6f5578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Obstacle\bean">
+      <UniqueIdentifier>{ecf729fd-5c1d-44fc-a0b8-c5980b5f4f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Obstacle\dream">
+      <UniqueIdentifier>{adf0f0de-0444-49d2-9f47-58c09887ea15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels\test\Obstacle\nightmare">
+      <UniqueIdentifier>{7ece4528-e5b5-4912-be68-4a294f54ffbd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)Common\FallFuryStyles.xaml">
@@ -762,5 +807,124 @@
     <Media Include="$(MSBuildThisFileDirectory)Assets\Sounds\Wind.wav">
       <Filter>Assets\Sounds</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_and_beyond.xml">
+      <Filter>Levels\Garden</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\bean_stalking.xml">
+      <Filter>Levels\Garden</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Garden\thorn_apart.xml">
+      <Filter>Levels\Garden</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\chasing_monsters.xml">
+      <Filter>Levels\GoGoTeddy</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\full_pilot.xml">
+      <Filter>Levels\GoGoTeddy</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\mind.xml">
+      <Filter>Levels\GoGoTeddy</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\GoGoTeddy\the_beginning.xml">
+      <Filter>Levels\GoGoTeddy</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\chasing_monsters.xml">
+      <Filter>Levels\Nightmare</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\full_pilot.xml">
+      <Filter>Levels\Nightmare</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Nightmare\the_beginning.xml">
+      <Filter>Levels\Nightmare</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lightyears_away.xml">
+      <Filter>Levels\Space</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\lost_planet.xml">
+      <Filter>Levels\Space</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\rocket_power.xml">
+      <Filter>Levels\Space</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\Space\stars_and_moons.xml">
+      <Filter>Levels\Space</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\core.xml">
+      <Filter>Levels</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\multiple.xml">
+      <Filter>Levels\test\Buttons</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Buttons\single.xml">
+      <Filter>Levels\test\Buttons</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Death\0.xml">
+      <Filter>Levels\test\Death</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\bronze.xml">
+      <Filter>Levels\test\Medals</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\gold.xml">
+      <Filter>Levels\test\Medals</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Medals\silver.xml">
+      <Filter>Levels\test\Medals</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\0.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\1.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\2.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\3.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\4.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\5.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\6.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\7.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\8.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\9.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Monsters\10.xml">
+      <Filter>Levels\test\Monsters</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\PowerUps\0.xml">
+      <Filter>Levels\test\PowerUps</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\0.xml">
+      <Filter>Levels\test\Obstacle\bean</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\bean\1.xml">
+      <Filter>Levels\test\Obstacle\bean</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\0.xml">
+      <Filter>Levels\test\Obstacle\dream</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\dream\1.xml">
+      <Filter>Levels\test\Obstacle\dream</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\0.xml">
+      <Filter>Levels\test\Obstacle\nightmare</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)Levels\test\Obstacle\nightmare\1.xml">
+      <Filter>Levels\test\Obstacle\nightmare</Filter>
+    </Xml>
   </ItemGroup>
 </Project>
