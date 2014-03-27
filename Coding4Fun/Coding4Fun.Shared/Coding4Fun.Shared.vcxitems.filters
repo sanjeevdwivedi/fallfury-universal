@@ -71,6 +71,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.h">
       <Filter>Audio</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)Coding4FunMain.cpp" />
@@ -123,6 +124,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Audio\MediaStreamer.cpp">
       <Filter>Audio</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)MenuItems\MenuItem.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="$(MSBuildThisFileDirectory)Content\SamplePixelShader.hlsl">
