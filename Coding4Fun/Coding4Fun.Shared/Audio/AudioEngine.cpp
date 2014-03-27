@@ -526,6 +526,7 @@ void Audio::SetSoundEffectPitch(SoundEvent sound, float pitch)
 
 void Audio::SetSoundEffectFilter(SoundEvent sound, float frequency, float oneOverQ)
 {
+#ifndef WP8
     if (m_soundEffects[sound].m_soundEffectSourceVoice != nullptr) {
         if (oneOverQ <= 0.1f)
         {
@@ -539,6 +540,7 @@ void Audio::SetSoundEffectFilter(SoundEvent sound, float frequency, float oneOve
 
         m_soundEffects[sound].m_soundEffectSourceVoice->SetFilterParameters(&params);
     }
+#endif
 }
 
 // Restarts the audio streams. A call to this method must match a previous call

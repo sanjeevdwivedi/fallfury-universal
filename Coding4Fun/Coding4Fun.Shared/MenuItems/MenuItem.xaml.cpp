@@ -86,7 +86,10 @@ void MenuItem::Grid_PointerPressed(Platform::Object^ sender, Windows::UI::Xaml::
 	coverActiveRectangle->Visibility = Windows::UI::Xaml::Visibility::Visible;
 	((Storyboard^)ControlContainer->Resources->Lookup("ArrowAnimator"))->Begin();
 
+// TODO: (sanjeevd) FIX this in WP8
+#ifndef WP8
 	coreMenuMedia->Play();
+#endif
 }
 
 void MenuItem::Grid_PointerReleased(Platform::Object^ sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs^ e)

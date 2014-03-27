@@ -6,14 +6,14 @@
 #include "pch.h"
 #include "DirectXPage.xaml.h"
 
-using namespace Coding4Fun;
+using namespace Coding4Fun::FallFury;
+using namespace Coding4Fun::FallFury::Helpers;
 
 using namespace Platform;
 using namespace Windows::ApplicationModel;
 using namespace Windows::ApplicationModel::Activation;
 using namespace Windows::Foundation;
 using namespace Windows::Foundation::Collections;
-using namespace Windows::Storage;
 using namespace Windows::UI::Xaml;
 using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Controls::Primitives;
@@ -22,6 +22,7 @@ using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Interop;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+
 /// <summary>
 /// Initializes the singleton application object.  This is the first line of authored code
 /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,7 +31,6 @@ App::App()
 {
 	InitializeComponent();
 	Suspending += ref new SuspendingEventHandler(this, &App::OnSuspending);
-	Resuming += ref new EventHandler<Object^>(this, &App::OnResuming);
 }
 
 /// <summary>
@@ -38,55 +38,29 @@ App::App()
 /// will be used when the application is launched to open a specific file, to display
 /// search results, and so forth.
 /// </summary>
-/// <param name="e">Details about the launch request and process.</param>
-void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e)
+/// <param name="args">Details about the launch request and process.</param>
+void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ pArgs)
 {
-#if _DEBUG
-	if (IsDebuggerPresent())
+	if (pArgs->PreviousExecutionState == ApplicationExecutionState::Terminated)
 	{
-		DebugSettings->EnableFrameRateCounter = true;
-	}
-#endif
-
-	if (m_directXPage == nullptr)
-	{
-		m_directXPage = ref new DirectXPage();
+		//TODO: Load state from previously suspended application
 	}
 
-	if (e->PreviousExecutionState == ApplicationExecutionState::Terminated)
-	{
-		m_directXPage->LoadInternalState(ApplicationData::Current->LocalSettings->Values);
-	}
-
-	// Place the page in the current window and ensure that it is active.
-	Window::Current->Content = m_directXPage;
+	// Place the frame in the current Window and ensure that it is active
+	Window::Current->Content = ref new DirectXPage();
 	Window::Current->Activate();
 }
 
 /// <summary>
-/// Invoked when application execution is being suspended.  Application state is saved
-/// without knowing whether the application will be terminated or resumed with the contents
-/// of memory still intact.
+/// Invoked when the application is being suspended.
 /// </summary>
-/// <param name="sender">The source of the suspend request.</param>
-/// <param name="e">Details about the suspend request.</param>
-void App::OnSuspending(Object^ sender, SuspendingEventArgs^ e)
+/// <param name="sender">Details about the origin of the event.</param>
+/// <param name="args">Details about the suspending event.</param>
+void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ e)
 {
-	(void) sender;	// Unused parameter
-	(void) e;	// Unused parameter
+	(void)sender;	// Unused parameter
+	(void)e;	// Unused parameter
 
-	m_directXPage->SaveInternalState(ApplicationData::Current->LocalSettings->Values);
-}
-
-/// <summary>
-/// Invoked when application execution is being resumed.
-/// </summary>
-/// <param name="sender">The source of the resume request.</param>
-/// <param name="args">Details about the resume request.</param>
-void App::OnResuming(Object ^sender, Object ^args)
-{
-	(void) sender; // Unused parameter
-	(void) args; // Unused parameter
-
-	m_directXPage->LoadInternalState(ApplicationData::Current->LocalSettings->Values);
+	StaticDataHelper::IsPaused = true;
+	//TODO: Save application state and stop any background activity
 }
