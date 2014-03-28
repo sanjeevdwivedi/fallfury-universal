@@ -338,6 +338,8 @@ void GamePlayScreen::AccelerometerReadingChanged(_In_ Accelerometer^ acceleromet
 			double accelX = args->Reading->AccelerationX;
 			double accelY = args->Reading->AccelerationY;
 			if (currentOrientation == DisplayOrientations::Portrait)
+				// TODO: (sanjeevd) This is broken. On Phone, the Y sensor permanently reads -1 when vertical
+				// This should actually read from X value
 				accelValue = args->Reading->AccelerationY;
 			else if (currentOrientation == DisplayOrientations::PortraitFlipped)
 				accelValue = -args->Reading->AccelerationY;
