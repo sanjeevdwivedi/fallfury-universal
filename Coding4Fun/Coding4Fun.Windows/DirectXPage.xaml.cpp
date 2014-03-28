@@ -251,6 +251,7 @@ void DirectXPage::UpdateWindowSize()
 		visibility = false;
 
 	float margin = (m_renderer->m_renderTargetSize.Width - 768.0f) / 2.0f;
+	//margin = 0;
 	if (margin < 2.0)
 		visibility = false;
 

@@ -8,7 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="OnLoaded" KeyDown="OnKeyDown" LayoutUpdated="XAMLPage_LayoutUpdated">
 
-    <SwapChainPanel  x:Name="XAMLPage">
+    <Viewbox Stretch="Fill">
+    <SwapChainPanel  x:Name="XAMLPage" Width="1080" Height="1920">
 
         <Grid HorizontalAlignment="Left" x:Name="containerA">
             <Rectangle Fill="#09bbe3" />
@@ -801,5 +802,7 @@
 
             </Grid>
         </Popup>
+
     </SwapChainPanel>
+    </Viewbox>
 </Page>    
