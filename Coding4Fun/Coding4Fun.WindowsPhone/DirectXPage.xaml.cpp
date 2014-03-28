@@ -496,8 +496,14 @@ void DirectXPage::LoadSettings()
 	if (SettingsHelper::Exists("accEnabled"))
 		IsAccelerometerEnabled = safe_cast<bool>(SettingsHelper::Read("accEnabled"));
 
+	// TODO: (sanjeevd) - remove this
+	bool accelEnabledStatus = IsAccelerometerEnabled;
+
 	if (SettingsHelper::Exists("accInverted"))
 		IsAccelerometerInverted = safe_cast<bool>(SettingsHelper::Read("accInverted"));
+	
+	// TODO: (sanjeevd) - remove this
+	bool accelInvertedEnabledStatus = IsAccelerometerInverted;
 
 	if (SettingsHelper::Exists("musicVolume"))
 	{

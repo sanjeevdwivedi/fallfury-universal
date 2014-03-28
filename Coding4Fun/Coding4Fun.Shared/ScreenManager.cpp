@@ -186,6 +186,10 @@ void ScreenManager::LoadScreen()
 
 bool ScreenManager::IsWithinScreenBoundaries(float2 position)
 {
+	// TODO: (sanjeevd) following variables only for checking values
+	float loX = CurrentGameScreen->LoBoundX;
+	float hiX = CurrentGameScreen->HiBoundX;
+
 	if (position.x < CurrentGameScreen->LoBoundX || position.x > CurrentGameScreen->HiBoundX || position.y < CurrentGameScreen->LoBoundY || position.y > CurrentGameScreen->HiBoundY)
 		return false;
 	else

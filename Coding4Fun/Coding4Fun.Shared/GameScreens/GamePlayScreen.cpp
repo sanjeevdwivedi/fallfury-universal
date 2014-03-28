@@ -69,14 +69,21 @@ void GamePlayScreen::Update(float timeTotal, float timeDelta)
 
 		float compositePosition = GameBear->Position.x + ((float)m_xAcceleration * m_accelerationMultiplier);
 
+#ifndef WP8
 		if (m_xAcceleration < 0)
 			compositePosition -= 100.0f;
 		else
 			compositePosition += 100.0f;
+#endif
 
 		if (Manager->IsWithinScreenBoundaries(float2(compositePosition, GameBear->Position.y)))
 		{
 			GameBear->Position.x += (float)m_xAcceleration * m_accelerationMultiplier;
+
+			// TODO: (sanjeevd) following variables only to read the values. Remove
+			double gameBearPosition = GameBear->Position.x;
+			double multiplier = m_accelerationMultiplier;
+			int x = 10;
 		}
 		else
 		{
@@ -315,29 +322,40 @@ void GamePlayScreen::Shoot(float posX, float posY, float veloX, float veloY, flo
 	m_ammoCollection.push_back(item);
 }
 
-
+bool doOnce = false;
 void GamePlayScreen::AccelerometerReadingChanged(_In_ Accelerometer^ accelerometer, _In_ AccelerometerReadingChangedEventArgs^ args)
 {
 	if (StaticDataHelper::IsAccelerometerEnabled)
 	{
-		auto currentOrientation = DisplayProperties::CurrentOrientation;
-		double accelValue;
+		// TODO: (sanjeevd) hacky hacky, accelerometer logic is completely broken
+#ifdef WP8
+		if (!doOnce)
+		{
+#endif
+			auto currentOrientation = DisplayProperties::CurrentOrientation;
+			double accelValue;
 
-		if (currentOrientation == DisplayOrientations::Portrait)
-			accelValue = args->Reading->AccelerationY;
-		else if (currentOrientation == DisplayOrientations::PortraitFlipped)
-			accelValue = -args->Reading->AccelerationY;
-		else if (currentOrientation == DisplayOrientations::Landscape)
-			accelValue = args->Reading->AccelerationX;
-		else if (currentOrientation == DisplayOrientations::LandscapeFlipped)
-			accelValue = -args->Reading->AccelerationX;
-		else
-			accelValue = 0.0f;
+			double accelX = args->Reading->AccelerationX;
+			double accelY = args->Reading->AccelerationY;
+			if (currentOrientation == DisplayOrientations::Portrait)
+				accelValue = args->Reading->AccelerationY;
+			else if (currentOrientation == DisplayOrientations::PortraitFlipped)
+				accelValue = -args->Reading->AccelerationY;
+			else if (currentOrientation == DisplayOrientations::Landscape)
+				accelValue = args->Reading->AccelerationX;
+			else if (currentOrientation == DisplayOrientations::LandscapeFlipped)
+				accelValue = -args->Reading->AccelerationX;
+			else
+				accelValue = 0.0f;
 
-		if (StaticDataHelper::IsAccelerometerInverted)
-			m_xAcceleration = -accelValue;
-		else
-			m_xAcceleration = accelValue;
+			if (StaticDataHelper::IsAccelerometerInverted)
+				m_xAcceleration = -accelValue;
+			else
+				m_xAcceleration = accelValue;
+#ifdef WP8
+			doOnce = true;
+		}
+#endif
 	}
 }
 
@@ -368,6 +386,24 @@ void GamePlayScreen::OnPointerReleased(Windows::UI::Core::PointerEventArgs^ args
 
 void GamePlayScreen::OnPointerPressed(Windows::UI::Core::PointerEventArgs^ args)
 {
+	//TODO: (sanjeevd) hacked up the pointer pressed event on WP8 to apply acceleration
+#ifdef WP8
+	if (StaticDataHelper::IsMouseEnabled)
+	{
+		if (GameBear != nullptr)
+		{
+			m_touchCounter++;
+			if (GameBear->IsWithinScreenBoundaries(GameBear->Size.x, 0.0f, GetScreenBounds()))
+			{
+				double currentPointX = args->CurrentPoint->RawPosition.X;
+				double gameBearPointX = GameBear->Position.x;
+				m_xAcceleration = (args->CurrentPoint->RawPosition.X - GameBear->Position.x) / m_screenSize.x;
+				if (m_xAcceleration > 0) m_xAcceleration = 0.85f;
+				if (m_xAcceleration < 0) m_xAcceleration = -0.85f;
+			}
+		}
+	}
+#endif
 }
 
 void GamePlayScreen::CheckForCollisionWithPowerups()
