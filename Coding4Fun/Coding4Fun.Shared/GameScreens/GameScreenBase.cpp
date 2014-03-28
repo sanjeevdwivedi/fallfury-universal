@@ -63,7 +63,7 @@ void GameScreenBase::UpdateWindowSize()
 #else
 	// TODO: (sanjeevd) This is hacky. Not really sure why the scale factors are here, or why this
 	// scale factor and swapping height for width works, but whatever.
-	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenHeight / 2.2f;
+	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenHeight / 3.0f;
 #endif
 
 	m_backgroundPositionA = BACKGROUND_MIDPOINT;
