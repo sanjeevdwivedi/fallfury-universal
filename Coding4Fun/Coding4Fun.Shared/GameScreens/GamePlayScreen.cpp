@@ -70,6 +70,7 @@ void GamePlayScreen::Update(float timeTotal, float timeDelta)
 		float compositePosition = GameBear->Position.x + ((float)m_xAcceleration * m_accelerationMultiplier);
 
 #ifndef WP8
+		// TODO: (sanjeevd) Fix this for Phone
 		if (m_xAcceleration < 0)
 			compositePosition -= 100.0f;
 		else
@@ -521,6 +522,22 @@ void GamePlayScreen::RenderScreen()
 	{
 		CurrentSpriteBatch->Begin();
 
+#ifdef WP8
+		// TODO: (sanjeevd) everything should probably be in DIPs or Pixels, for Phone, the following is converted to Pixels
+		CurrentSpriteBatch->Draw(
+			m_backgroundBlockA.Get(),
+			float2(m_screenSize.x / 2, m_backgroundPositionA),
+			PositionUnits::Pixels,
+			m_screenSize,
+			SizeUnits::Pixels);
+
+		CurrentSpriteBatch->Draw(
+			m_backgroundBlockB.Get(),
+			float2(m_screenSize.x / 2, m_backgroundPositionB),
+			PositionUnits::Pixels,
+			m_screenSize,
+			SizeUnits::Pixels);
+#else
 		CurrentSpriteBatch->Draw(
 			m_backgroundBlockA.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionA),
@@ -534,6 +551,8 @@ void GamePlayScreen::RenderScreen()
 			PositionUnits::DIPs,
 			m_screenSize,
 			SizeUnits::Pixels);
+#endif
+
 
 		CurrentSpriteBatch->Draw(
 			m_overlayA.Get(),

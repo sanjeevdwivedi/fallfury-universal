@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="f26c05dd-c0f4-43b2-96e1-fe9f7aab1389" Publisher="CN=Sanjeevd" Version="1.0.0.4" />
+  <Identity Name="f26c05dd-c0f4-43b2-96e1-fe9f7aab1389" Publisher="CN=Sanjeevd" Version="1.0.0.6" />
   <Properties>
     <DisplayName>Coding4Fun.Windows</DisplayName>
     <PublisherDisplayName>Sanjeevd</PublisherDisplayName>

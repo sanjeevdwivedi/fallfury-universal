@@ -20,19 +20,36 @@ void MenuScreen::RenderScreen()
 {
 	CurrentSpriteBatch->Begin();
 
+#ifdef WP8
+	// TODO: (sanjeevd) everything should probably be in DIPs or Pixels, for Phone, the following is converted to Pixels
+	CurrentSpriteBatch->Draw(
+		m_backgroundBlockA.Get(),
+		float2(m_screenSize.x/2, m_backgroundPositionA),
+		PositionUnits::Pixels,
+		m_screenSize,
+		SizeUnits::Pixels);
+	
+	CurrentSpriteBatch->Draw(
+		m_backgroundBlockB.Get(),
+		float2(m_screenSize.x / 2, m_backgroundPositionB),
+		PositionUnits::Pixels,
+		m_screenSize,
+		SizeUnits::Pixels);
+#else
 	CurrentSpriteBatch->Draw(
 		m_backgroundBlockA.Get(),
 		float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionA),
 		PositionUnits::DIPs,
 		m_screenSize,
 		SizeUnits::Pixels);
-	
+
 	CurrentSpriteBatch->Draw(
 		m_backgroundBlockB.Get(),
-		float2(Manager->m_windowBounds.Width / 2 ,m_backgroundPositionB),
+		float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionB),
 		PositionUnits::DIPs,
 		m_screenSize,
 		SizeUnits::Pixels);
+#endif
 
 	if (m_showBear->IsLoaded)
 		m_showBear->Render();
@@ -40,6 +57,21 @@ void MenuScreen::RenderScreen()
 	if (m_showMonster->IsLoaded)
 		m_showMonster->Render();
 
+#ifdef WP8
+	CurrentSpriteBatch->Draw(
+		m_overlayA.Get(),
+		float2(m_screenSize.x / 2, m_backgroundPositionA),
+		PositionUnits::Pixels,
+		m_screenSize,
+		SizeUnits::Pixels);
+
+	CurrentSpriteBatch->Draw(
+		m_overlayB.Get(),
+		float2(m_screenSize.x / 2 ,m_backgroundPositionB),
+		PositionUnits::Pixels,
+		m_screenSize,
+		SizeUnits::Pixels);
+#else
 	CurrentSpriteBatch->Draw(
 		m_overlayA.Get(),
 		float2(Manager->m_windowBounds.Width/2, m_backgroundPositionA),
@@ -53,7 +85,7 @@ void MenuScreen::RenderScreen()
 		PositionUnits::DIPs,
 		m_screenSize,
 		SizeUnits::Pixels);
-
+#endif
 	CurrentSpriteBatch->End();
 }
 

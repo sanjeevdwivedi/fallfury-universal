@@ -58,39 +58,51 @@ void GameScreenBase::UpdateWindowSize()
 	auto rWidth = Manager->m_renderTargetSize.Width;
 	auto rHeight = Manager->m_renderTargetSize.Height;
 
-#ifndef WP8
-	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenWidth / 2.0f;
+#ifdef WP8
+	BACKGROUND_MIDPOINT = rHeight / 2.0f;
+	m_backgroundPositionA = 0;
+	m_backgroundPositionB = 2 * BACKGROUND_MIDPOINT;
 #else
-	// TODO: (sanjeevd) This is hacky. Not really sure why the scale factors are here, or why this
-	// scale factor and swapping height for width works, but whatever.
-	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenHeight / 3.0f;
-#endif
-
+	BACKGROUND_MIDPOINT = Coding4Fun::FallFury::ScreenWidth / 2.0f;
 	m_backgroundPositionA = BACKGROUND_MIDPOINT;
 	m_backgroundPositionB = m_backgroundPositionA * 3;
+#endif
 
+
+	// gutters on the left and right
 	LoBoundX = (rWidth - Coding4Fun::FallFury::ScreenHeight) / 2.0f;
 	HiBoundX = LoBoundX + Coding4Fun::FallFury::ScreenHeight;
 
 	LoBoundY = 0;
 	HiBoundY = LoBoundY + rHeight;
 
-	//m_screenSize = float2(768.0f, rHeight);	
-
+#ifdef WP8
+	m_screenSize = float2(rWidth, rHeight);
+#else
 	m_screenSize = float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth);
+#endif
 }
 
 // TODO: (sanjeevd) This is where the background movement actually happens
 void GameScreenBase::MoveBackground(float velocity)
 {
+#ifdef WP8
 	if (m_backgroundPositionA <= -BACKGROUND_MIDPOINT)
-		m_backgroundPositionA = m_backgroundPositionB + (BACKGROUND_MIDPOINT * 2);
+		m_backgroundPositionA = m_backgroundPositionB + 2*BACKGROUND_MIDPOINT;
 	
 	if (m_backgroundPositionB <= -BACKGROUND_MIDPOINT)
-		m_backgroundPositionB = m_backgroundPositionA + (BACKGROUND_MIDPOINT * 2);
+		m_backgroundPositionB = m_backgroundPositionA + 2*BACKGROUND_MIDPOINT;
+#else
+	if (m_backgroundPositionA <= -BACKGROUND_MIDPOINT)
+		m_backgroundPositionA = m_backgroundPositionB + (BACKGROUND_MIDPOINT * 2);
 
+	if (m_backgroundPositionB <= -BACKGROUND_MIDPOINT)
+		m_backgroundPositionB = m_backgroundPositionA + (BACKGROUND_MIDPOINT * 2);
+#endif
 	m_backgroundPositionA -= velocity;
 	m_backgroundPositionB -= velocity;
+
+
 }
 
 void GameScreenBase::HandleKeyInput(Windows::System::VirtualKey)
