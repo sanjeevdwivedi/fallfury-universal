@@ -231,6 +231,9 @@ void GamePlayScreen::UpdateObstacles()
 
 	for (auto obstacle = m_obstacles.begin(); obstacle != m_obstacles.end(); obstacle++)
 	{
+		// NOTE: (sanjeevd) The pixel diff is being used to determine exactly where
+		// the obstacle is. This is a bit wonky as if the rest of the arithemetic is being
+		// done in DIPS, pixel arithemtic breaks. 
 		obstacle->Position.x = LoBoundX + obstacle->PixelDiff;
 
 		obstacle->Position.y -= GameBear->Velocity.y;

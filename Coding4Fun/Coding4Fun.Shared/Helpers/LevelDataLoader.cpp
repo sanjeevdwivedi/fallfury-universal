@@ -97,6 +97,7 @@ void Coding4Fun::FallFury::Helpers::LevelDataLoader::SetupObstacles(std::list<Co
 				}
 		case Coding4Fun::FallFury::Entities::ObstacleType::OT_SPACE_ROCKET:
 				{
+					// NOTE: (sanjeevd) This simply scales the assets appropriately.
 					newObstacle.Size = float2(318.0f, 345.0f) * newObstacle.Scale;
 					break;
 				}

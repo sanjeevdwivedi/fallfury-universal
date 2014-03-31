@@ -24,6 +24,7 @@ namespace Coding4Fun
 
 				Windows::Foundation::Rect GetBoundingBox()
 				{
+					// NOTE: (sanjeevd) This is the place where the scale is defined.
 					return Windows::Foundation::Rect(Position.x - (Size.x * Scale / 2.0f),
 						Position.y - (Size.y * Scale / 2.0f), Size.x * Scale, Size.y * Scale);
 				}
