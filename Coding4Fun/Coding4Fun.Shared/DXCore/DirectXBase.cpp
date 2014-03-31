@@ -393,7 +393,7 @@ void DirectXBase::Present()
 	}
 }
 
-// Method to convert a length in device-independent pixels (DIPs) to a length in physical pixels.
+// Method to convert a length in device-independent pixels (Pixels) to a length in physical pixels.
 float DirectXBase::ConvertDipsToPixels(float dips)
 {
 	static const float dipsPerInch = 96.0f;

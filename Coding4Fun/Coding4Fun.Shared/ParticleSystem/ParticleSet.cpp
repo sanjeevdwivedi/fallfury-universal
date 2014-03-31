@@ -65,7 +65,7 @@ void ParticleSet::Render(SpriteBatch ^spriteBatch)
 	for (auto particle = _particles.begin(); particle != _particles.end(); particle++)
     {
 		if (GamePlayScreen::Manager->IsWithinScreenBoundaries(particle->Position))
-			spriteBatch->Draw(_texture.Get(), particle->Position, PositionUnits::DIPs,
+			spriteBatch->Draw(_texture.Get(), particle->Position, PositionUnits::Pixels,
 			particle->Size * particle->Scale, SizeUnits::Pixels, particle->Shading, particle->Rotation);
     }
 }

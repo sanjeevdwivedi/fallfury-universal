@@ -23,7 +23,7 @@ void Coding4Fun::FallFury::Entities::Powerup::Render()
 	CurrentScreen->CurrentSpriteBatch->Draw(
 		CircleTexture.Get(),
 		Position,
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		Size * CircleScale,
 		SizeUnits::Pixels,
 		CircleShading,
@@ -32,7 +32,7 @@ void Coding4Fun::FallFury::Entities::Powerup::Render()
 	CurrentScreen->CurrentSpriteBatch->Draw(
 		Texture.Get(),
 		Position,
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		Size,
 		SizeUnits::Pixels,
 		float4(1.0f, 1.0f, 1.0f, 1.0f),

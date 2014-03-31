@@ -100,7 +100,7 @@ namespace Coding4Fun
 						CurrentSpriteBatch->Draw(
 							MainTexture.Get(),
 							Position,
-							PositionUnits::DIPs,
+							PositionUnits::Pixels,
 							Size,
 							SizeUnits::Pixels,
 							float4(1.0f,1.0f,1.0f,1.0f),

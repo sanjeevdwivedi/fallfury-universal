@@ -26,28 +26,28 @@ void GameWinScreen::RenderScreen()
 	CurrentSpriteBatch->Draw(
 		m_backgroundBlockA.Get(), 
 		float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionA),
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		m_screenSize,
 		SizeUnits::Pixels);
 	
 	CurrentSpriteBatch->Draw(
 		m_backgroundBlockB.Get(),
 		float2(Manager->m_windowBounds.Width / 2 ,m_backgroundPositionB),
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		m_screenSize,
 		SizeUnits::Pixels);
 
 	CurrentSpriteBatch->Draw(
 		m_overlayA.Get(),
 		float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionA),
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		m_screenSize,
 		SizeUnits::Pixels);
 	
 	CurrentSpriteBatch->Draw(
 		m_overlayB.Get(),
 		float2(Manager->m_windowBounds.Width /2 ,m_backgroundPositionB),
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		m_screenSize,
 		SizeUnits::Pixels);
 	

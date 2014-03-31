@@ -584,7 +584,7 @@ float2 SpriteBatch::StandardOrigin(float2 position, PositionUnits positionUnits,
         origin.x = (position.x / renderTargetSize.x) * 2.0f - 1.0f;
         origin.y = 1.0f - (position.y / renderTargetSize.y) * 2.0f;
     }
-    else if (positionUnits == PositionUnits::DIPs)
+    else if (positionUnits == PositionUnits::Pixels)
     {
         origin.x = ((position.x * dpi / 96.0f) / renderTargetSize.x) * 2.0f - 1.0f;
         origin.y = 1.0f - ((position.y * dpi / 96.0f) / renderTargetSize.y) * 2.0f;
@@ -614,7 +614,7 @@ float2 SpriteBatch::StandardOffset(float2 size, SizeUnits sizeUnits, float2 spri
     {
         offset = size;
     }
-    else if (sizeUnits == SizeUnits::DIPs)
+    else if (sizeUnits == SizeUnits::Pixels)
     {
         offset = size * dpi / 96.0f;
     }
@@ -628,7 +628,7 @@ float2 SpriteBatch::StandardOffset(float2 size, SizeUnits sizeUnits, float2 spri
 void SpriteBatch::Draw(
     _In_ ID3D11Texture2D* texture,
     _In_ float2 position,
-    _In_ PositionUnits positionUnits = PositionUnits::DIPs
+    _In_ PositionUnits positionUnits = PositionUnits::Pixels
     )
 {
     Draw(

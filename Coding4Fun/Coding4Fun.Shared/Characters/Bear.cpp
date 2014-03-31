@@ -544,7 +544,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 			HostContainer->CurrentSpriteBatch->Draw(
 				m_parachute.Get(),
 				m_parachutePosition,
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(721.0f, 855.0f) * Scale,
 				SizeUnits::Pixels,
 				m_shading,
@@ -560,7 +560,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_leftPaw.Get(),
 					m_leftPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(522.0f, 141.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -569,7 +569,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_body.Get(),
 					Position,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(400.0f, 400.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -578,7 +578,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_rightPaw.Get(),
 					m_rightPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(522.0f, 141.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -589,7 +589,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_rightPaw.Get(),
 					m_rightPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(522.0f, 141.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -598,7 +598,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_body.Get(),
 					Position,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(400.0f, 400.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -607,7 +607,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_leftPaw.Get(),
 					m_leftPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(522.0f, 141.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -617,7 +617,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 			HostContainer->CurrentSpriteBatch->Draw(
 				m_head.Get(),
 				m_headPosition,
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(458.0f, 313.0f) * Scale,
 				SizeUnits::Pixels,
 				m_shading,
@@ -630,7 +630,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 			HostContainer->CurrentSpriteBatch->Draw(
 				m_cape.Get(),
 				Position + float2(15.0f,0.0f),
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(498.0f, 375.0f) * Scale,
 				SizeUnits::Pixels,
 				m_shading,
@@ -641,7 +641,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_leftPaw.Get(),
 					m_leftPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(454.0f, 109.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -650,7 +650,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_body.Get(),
 					Position,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(400.0f, 400.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -659,7 +659,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_rightPaw.Get(),
 					m_rightPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(454.0f, 109.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -670,7 +670,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_rightPaw.Get(),
 					m_rightPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(454.0f, 109.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -679,7 +679,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_body.Get(),
 					Position,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(400.0f, 400.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -688,7 +688,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 				HostContainer->CurrentSpriteBatch->Draw(
 					m_leftPaw.Get(),
 					m_leftPawPosition,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					float2(454.0f, 109.0f) * Scale,
 					SizeUnits::Pixels,
 					m_shading,
@@ -698,7 +698,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 			HostContainer->CurrentSpriteBatch->Draw(
 				m_head.Get(),
 				m_headPosition + float2(0.0f, 80.0f),
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(458.0f, 313.0f) * Scale,
 				SizeUnits::Pixels,
 				m_shading,
@@ -710,7 +710,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 			HostContainer->CurrentSpriteBatch->Draw(
 				m_bubble.Get(),
 				Position,
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(988.0f, 988.0f) * Scale,
 				SizeUnits::Pixels,
 				m_shading,
@@ -724,7 +724,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 			HostContainer->CurrentSpriteBatch->Draw(
 				m_cape.Get(),
 				Position + float2(130.0f,-90.0f),
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(498.0f, 375.0f) * Scale,
 				SizeUnits::Pixels,
 				m_shading,
@@ -734,7 +734,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 		HostContainer->CurrentSpriteBatch->Draw(
 			m_rightPaw.Get(),
 			m_rightPawPosition,
-            PositionUnits::DIPs,
+            PositionUnits::Pixels,
             float2(1.0f, 1.0f) * Scale,
             SizeUnits::Normalized,
 			float4(1.0f,1.0f,1.0f,1.0f),
@@ -743,7 +743,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 		HostContainer->CurrentSpriteBatch->Draw(
             m_body.Get(),
 			Position,
-            PositionUnits::DIPs,
+            PositionUnits::Pixels,
             float2(1.0f, 1.0f) * Scale,
             SizeUnits::Normalized,
 			float4(1.0f,1.0f,1.0f,1.0f),
@@ -752,7 +752,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 		HostContainer->CurrentSpriteBatch->Draw(
 			m_head.Get(),
 			m_headPosition,
-            PositionUnits::DIPs,
+            PositionUnits::Pixels,
             float2(1.0f, 1.0f) * Scale,
             SizeUnits::Normalized,
 			float4(1.0f,1.0f,1.0f,1.0f),
@@ -761,7 +761,7 @@ void Coding4Fun::FallFury::Characters::Bear::Render()
 		HostContainer->CurrentSpriteBatch->Draw(
 			m_leftPaw.Get(),
 			m_leftPawPosition,
-            PositionUnits::DIPs,
+            PositionUnits::Pixels,
             float2(1.0f, 1.0f) * Scale,
             SizeUnits::Normalized,
 			float4(1.0f,1.0f,1.0f,1.0f),
@@ -774,7 +774,7 @@ void Coding4Fun::FallFury::Characters::Bear::RenderShell(float2 position, float 
 	HostContainer->CurrentSpriteBatch->Draw(
 			m_weaponTexture.Get(),
 			position,
-			PositionUnits::DIPs,
+			PositionUnits::Pixels,
 			m_weaponSize,
 			SizeUnits::Pixels,
 			float4(1.0f, 1.0f, 1.0f, 1.0f),

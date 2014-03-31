@@ -526,7 +526,7 @@ void GamePlayScreen::RenderScreen()
 		CurrentSpriteBatch->Begin();
 
 #ifdef WP8
-		// TODO: (sanjeevd) everything should probably be in DIPs or Pixels, for Phone, the following is converted to Pixels
+		// TODO: (sanjeevd) everything should probably be in Pixels or Pixels, for Phone, the following is converted to Pixels
 		CurrentSpriteBatch->Draw(
 			m_backgroundBlockA.Get(),
 			float2(m_screenSize.x / 2, m_backgroundPositionA),
@@ -544,14 +544,14 @@ void GamePlayScreen::RenderScreen()
 		CurrentSpriteBatch->Draw(
 			m_backgroundBlockA.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionA),
-			PositionUnits::DIPs,
+			PositionUnits::Pixels,
 			m_screenSize,
 			SizeUnits::Pixels);
 
 		CurrentSpriteBatch->Draw(
 			m_backgroundBlockB.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_backgroundPositionB),
-			PositionUnits::DIPs,
+			PositionUnits::Pixels,
 			m_screenSize,
 			SizeUnits::Pixels);
 #endif
@@ -560,14 +560,14 @@ void GamePlayScreen::RenderScreen()
 		CurrentSpriteBatch->Draw(
 			m_overlayA.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_overlayPositionA),
-			PositionUnits::DIPs,
+			PositionUnits::Pixels,
 			float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 			SizeUnits::Pixels);
 
 		CurrentSpriteBatch->Draw(
 			m_overlayB.Get(),
 			float2(Manager->m_windowBounds.Width / 2, m_overlayPositionB),
-			PositionUnits::DIPs,
+			PositionUnits::Pixels,
 			float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 			SizeUnits::Pixels);
 
@@ -576,14 +576,14 @@ void GamePlayScreen::RenderScreen()
 			CurrentSpriteBatch->Draw(
 				m_overlayGalaxyA.Get(),
 				float2(Manager->m_windowBounds.Width / 2, m_overlayGalaxyPositionA),
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 				SizeUnits::Pixels);
 
 			CurrentSpriteBatch->Draw(
 				m_overlayGalaxyB.Get(),
 				float2(Manager->m_windowBounds.Width / 2, m_overlayGalaxyPositionB),
-				PositionUnits::DIPs,
+				PositionUnits::Pixels,
 				float2(Coding4Fun::FallFury::ScreenHeight, Coding4Fun::FallFury::ScreenWidth),
 				SizeUnits::Pixels);
 		}
@@ -591,7 +591,7 @@ void GamePlayScreen::RenderScreen()
 		CurrentSpriteBatch->Draw(
 			m_badHealthOverlay.Get(),
 			float2(Manager->m_windowBounds.Width / 2, Manager->m_windowBounds.Height / 2),
-			PositionUnits::DIPs,
+			PositionUnits::Pixels,
 			m_screenSize,
 			SizeUnits::Pixels,
 			m_badHealthShading,
@@ -622,7 +622,7 @@ void GamePlayScreen::RenderScreen()
 				CurrentSpriteBatch->Draw(
 					m_buttonTexture.Get(),
 					loopButton->Position,
-					PositionUnits::DIPs,
+					PositionUnits::Pixels,
 					loopButton->Size,
 					SizeUnits::Pixels);
 			}
@@ -789,7 +789,7 @@ void GamePlayScreen::DrawObstacle(Coding4Fun::FallFury::Entities::Obstacle obsta
 	CurrentSpriteBatch->Draw(
 		texture.Get(),
 		obstacle.Position,
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		obstacle.Size,
 		SizeUnits::Pixels,
 		float4(1.0f, 1.0f, 1.0f, 1.0f),

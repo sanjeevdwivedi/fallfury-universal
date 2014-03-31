@@ -358,7 +358,7 @@ void Coding4Fun::FallFury::Characters::Monster::Render()
 	HostContainer->CurrentSpriteBatch->Draw(
 		m_body.Get(),
 		Position,
-		PositionUnits::DIPs,
+		PositionUnits::Pixels,
 		Size * Scale,
 		SizeUnits::Pixels,
 		m_shading,
