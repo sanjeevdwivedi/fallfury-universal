@@ -332,25 +332,37 @@ void GamePlayScreen::AccelerometerReadingChanged(_In_ Accelerometer^ acceleromet
 	if (StaticDataHelper::IsAccelerometerEnabled)
 	{
 		// TODO: (sanjeevd) hacky hacky, accelerometer logic is completely broken
-#ifdef WP8
-		if (!doOnce)
-		{
-#endif
 			auto currentOrientation = DisplayProperties::CurrentOrientation;
 			double accelValue;
 
 			double accelX = args->Reading->AccelerationX;
 			double accelY = args->Reading->AccelerationY;
 			if (currentOrientation == DisplayOrientations::Portrait)
+#ifdef WP8
+				accelValue = args->Reading->AccelerationX;
+#else
 				// TODO: (sanjeevd) This is broken. On Phone, the Y sensor permanently reads -1 when vertical
 				// This should actually read from X value
 				accelValue = args->Reading->AccelerationY;
+#endif
 			else if (currentOrientation == DisplayOrientations::PortraitFlipped)
-				accelValue = -args->Reading->AccelerationY;
-			else if (currentOrientation == DisplayOrientations::Landscape)
-				accelValue = args->Reading->AccelerationX;
-			else if (currentOrientation == DisplayOrientations::LandscapeFlipped)
+#ifdef WP8
 				accelValue = -args->Reading->AccelerationX;
+#else
+				accelValue = -args->Reading->AccelerationY;
+#endif
+			else if (currentOrientation == DisplayOrientations::Landscape)
+#ifdef WP8
+				accelValue = args->Reading->AccelerationY;
+#else
+				accelValue = args->Reading->AccelerationX;
+#endif
+			else if (currentOrientation == DisplayOrientations::LandscapeFlipped)
+#ifdef WP8
+				accelValue = -args->Reading->AccelerationY;
+#else
+				accelValue = -args->Reading->AccelerationX;
+#endif
 			else
 				accelValue = 0.0f;
 
@@ -358,10 +370,6 @@ void GamePlayScreen::AccelerometerReadingChanged(_In_ Accelerometer^ acceleromet
 				m_xAcceleration = -accelValue;
 			else
 				m_xAcceleration = accelValue;
-#ifdef WP8
-			doOnce = true;
-		}
-#endif
 	}
 }
 
